@@ -1,0 +1,80 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:NadMatcher.UI.ViewModels"
+        xmlns:views="using:NadMatcher.UI.Views"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="800"
+        x:Class="NadMatcher.UI.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/aumovio-nad-selector.ico"
+        Title="AumovioNadSelectorVRG8 - Automotive Module Country Compatibility Tool"
+        Width="1200" Height="800"
+        MinWidth="900" MinHeight="600"
+        WindowStartupLocation="CenterScreen">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid RowDefinitions="Auto,*" Background="{DynamicResource AppBackgroundBrush}">
+        <!-- Header with gradient -->
+        <Border Grid.Row="0" Padding="20,16">
+          <Border.Background>
+            <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+              <GradientStop Color="#1565c0" Offset="0"/>
+              <GradientStop Color="#0d47a1" Offset="1"/>
+            </LinearGradientBrush>
+          </Border.Background>
+          <Grid ColumnDefinitions="*,Auto,Auto,Auto">
+            <StackPanel VerticalAlignment="Center">
+              <StackPanel Orientation="Horizontal" Spacing="12">
+                <TextBlock Text="AumovioNadSelectorVRG8" FontSize="26" FontWeight="Bold" Foreground="White"/>
+                <Border Background="#ffffff30" CornerRadius="4" Padding="8,4" VerticalAlignment="Center">
+                  <TextBlock Text="{Binding CurrentVersion, StringFormat='v{0}'}" FontSize="11" Foreground="White" FontWeight="SemiBold"/>
+                </Border>
+              </StackPanel>
+              <TextBlock Text="Find compatible NAD modules for your target countries"
+                         Foreground="#b3d4fc" FontSize="13" Margin="0,4,0,0"/>
+            </StackPanel>
+
+            <!-- Update Available Button -->
+            <Button Grid.Column="1" Command="{Binding InstallUpdateCommand}"
+                    IsVisible="{Binding UpdateAvailable}"
+                    VerticalAlignment="Center" Cursor="Hand" Margin="0,0,12,0"
+                    Background="#4caf50" Foreground="White" CornerRadius="8" Padding="14,8"
+                    IsEnabled="{Binding !IsUpdating}">
+              <StackPanel Orientation="Horizontal" Spacing="8">
+                <TextBlock Text="⬆" FontSize="14" VerticalAlignment="Center"/>
+                <StackPanel>
+                  <TextBlock Text="{Binding UpdateVersion, StringFormat='Update v{0}'}" FontSize="12" FontWeight="SemiBold"/>
+                  <ProgressBar IsVisible="{Binding IsUpdating}" Value="{Binding UpdateProgress}"
+                               Minimum="0" Maximum="100" Height="3" Width="80"/>
+                </StackPanel>
+              </StackPanel>
+            </Button>
+
+            <!-- Theme Toggle Button -->
+            <Button Grid.Column="2" Command="{Binding ToggleThemeCommand}"
+                    Classes="theme-toggle" VerticalAlignment="Center" Cursor="Hand">
+              <StackPanel Orientation="Horizontal" Spacing="8">
+                <TextBlock Text="{Binding IsDarkMode, Converter={StaticResource BoolToThemeIconConverter}}"
+                           Foreground="White" FontSize="16" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding IsDarkMode, Converter={StaticResource BoolToThemeTextConverter}}"
+                           Foreground="White" FontSize="13" VerticalAlignment="Center" FontWeight="SemiBold"/>
+              </StackPanel>
+            </Button>
+          </Grid>
+        </Border>
+
+        <!-- Main content with tabs -->
+        <TabControl Grid.Row="1" SelectedIndex="{Binding SelectedTabIndex}" Padding="0">
+            <TabItem Header="NAD → Countries" FontSize="14" Padding="20,12">
+                <views:NadSelectionView DataContext="{Binding NadSelectionViewModel}"/>
+            </TabItem>
+            <TabItem Header="Countries → NAD" FontSize="14" Padding="20,12">
+                <views:CountrySelectionView DataContext="{Binding CountrySelectionViewModel}"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

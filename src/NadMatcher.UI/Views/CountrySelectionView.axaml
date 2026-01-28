@@ -1,0 +1,440 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:NadMatcher.UI.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="600"
+             x:Class="NadMatcher.UI.Views.CountrySelectionView"
+             x:DataType="vm:CountrySelectionViewModel">
+
+  <Grid RowDefinitions="Auto,*,Auto" Background="{DynamicResource AppBackgroundBrush}">
+    <!-- Header -->
+    <Border Grid.Row="0" Background="{DynamicResource CardSecondaryBackgroundBrush}" Padding="20">
+      <StackPanel Spacing="16">
+        <StackPanel Orientation="Horizontal" Spacing="12">
+          <TextBlock Text="Country Selection" FontSize="22" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+          <Border Background="{DynamicResource AccentBrush}" CornerRadius="12" Padding="12,4"
+                  VerticalAlignment="Center">
+            <TextBlock Text="{Binding SelectedCount, StringFormat='{}{0} selected'}"
+                       FontSize="12" Foreground="White" FontWeight="SemiBold"/>
+          </Border>
+        </StackPanel>
+        <TextBlock Text="Select countries to find NAD modules that support all selected regions."
+                   TextWrapping="Wrap" Foreground="{DynamicResource TextSecondaryBrush}"/>
+
+        <!-- Filters Row 1: Region and Actions -->
+        <Grid ColumnDefinitions="Auto,220,*,Auto,Auto,Auto">
+          <TextBlock Text="Region:" VerticalAlignment="Center" Margin="0,0,12,0" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+          <ComboBox Grid.Column="1"
+                    ItemsSource="{Binding Regions}"
+                    SelectedItem="{Binding SelectedRegion}"
+                    PlaceholderText="All Regions"
+                    CornerRadius="8"/>
+
+          <StackPanel Grid.Column="3" Orientation="Horizontal" Spacing="8">
+            <Button Content="Select All" Command="{Binding SelectAllCommand}" Classes="secondary"
+                    CornerRadius="8" Padding="16,8"/>
+            <Button Content="Clear" Command="{Binding ClearSelectionCommand}" Classes="secondary"
+                    CornerRadius="8" Padding="16,8"/>
+          </StackPanel>
+
+          <Button Grid.Column="5" Content="Analyze" Command="{Binding AnalyzeCommand}"
+                  Classes="accent" Margin="12,0,0,0"/>
+        </Grid>
+
+        <!-- Technology Filters -->
+        <Border Background="{DynamicResource CardBackgroundBrush}"
+                CornerRadius="12" Padding="16" BorderBrush="{DynamicResource CardBorderBrush}"
+                BorderThickness="1">
+          <StackPanel Orientation="Horizontal" Spacing="20">
+            <TextBlock Text="Technologies:" VerticalAlignment="Center" FontWeight="SemiBold" Opacity="0.8"/>
+            <CheckBox IsChecked="{Binding IncludeGsm}" VerticalAlignment="Center">
+              <Border Background="#fce4ec" CornerRadius="6" Padding="10,6">
+                <TextBlock Text="GSM" FontSize="12" Foreground="#c2185b" FontWeight="SemiBold"/>
+              </Border>
+            </CheckBox>
+            <CheckBox IsChecked="{Binding IncludeUmts}" VerticalAlignment="Center">
+              <Border Background="#fff3e0" CornerRadius="6" Padding="10,6">
+                <TextBlock Text="UMTS" FontSize="12" Foreground="#e65100" FontWeight="SemiBold"/>
+              </Border>
+            </CheckBox>
+            <CheckBox IsChecked="{Binding IncludeLte}" VerticalAlignment="Center">
+              <Border Background="#e3f2fd" CornerRadius="6" Padding="10,6">
+                <TextBlock Text="LTE" FontSize="12" Foreground="#1565c0" FontWeight="SemiBold"/>
+              </Border>
+            </CheckBox>
+            <CheckBox IsChecked="{Binding Include5G}" VerticalAlignment="Center">
+              <Border Background="#e8f5e9" CornerRadius="6" Padding="10,6">
+                <TextBlock Text="5G NR" FontSize="12" Foreground="#2e7d32" FontWeight="SemiBold"/>
+              </Border>
+            </CheckBox>
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </Border>
+
+    <!-- Main content -->
+    <Grid Grid.Row="1" ColumnDefinitions="*,*" Margin="20,16">
+      <!-- Country List -->
+      <Border Grid.Column="0" Background="{DynamicResource CardBackgroundBrush}" CornerRadius="12" Padding="20"
+              BorderBrush="{DynamicResource CardBorderBrush}" BorderThickness="1" Margin="0,0,10,0">
+        <Grid RowDefinitions="Auto,*">
+          <StackPanel Orientation="Horizontal" Spacing="8" Margin="0,0,0,16">
+            <TextBlock Text="Countries" FontSize="18" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+            <Border Background="{DynamicResource SubtleBackgroundBrush}" CornerRadius="10" Padding="8,4">
+              <TextBlock Text="{Binding Countries.Count}" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}"/>
+            </Border>
+          </StackPanel>
+
+          <ListBox Grid.Row="1" ItemsSource="{Binding Countries}"
+                   Background="Transparent" BorderThickness="0"
+                   SelectionMode="Multiple">
+            <ListBox.ItemTemplate>
+              <DataTemplate x:DataType="vm:CountryItem">
+                <Border Padding="12,8" Margin="0,3"
+                        Background="{Binding IsSelected, Converter={StaticResource BoolToBackgroundConverter}}"
+                        CornerRadius="10">
+                  <StackPanel>
+                    <!-- Main row -->
+                    <Grid ColumnDefinitions="Auto,*,Auto,Auto">
+                      <CheckBox IsChecked="{Binding IsSelected}" VerticalAlignment="Center"/>
+                      <StackPanel Grid.Column="1" Margin="12,0,0,0">
+                        <TextBlock Text="{Binding DisplayName}" FontWeight="SemiBold" FontSize="14"/>
+                        <StackPanel Orientation="Horizontal" Spacing="6" Margin="0,4,0,0">
+                          <TextBlock Text="{Binding Region}" Opacity="0.6" FontSize="12"/>
+                          <Border Background="#e8f5e9" CornerRadius="4" Padding="6,2" IsVisible="{Binding Has5G}">
+                            <TextBlock Text="5G" FontSize="10" Foreground="#2e7d32" FontWeight="SemiBold"/>
+                          </Border>
+                          <Border Background="#e3f2fd" CornerRadius="4" Padding="6,2" IsVisible="{Binding HasLte}">
+                            <TextBlock Text="LTE" FontSize="10" Foreground="#1565c0" FontWeight="SemiBold"/>
+                          </Border>
+                        </StackPanel>
+                      </StackPanel>
+                      <Border Grid.Column="2" Background="{DynamicResource SubtleBackgroundBrush}"
+                              CornerRadius="8" Padding="8,4" VerticalAlignment="Center" Margin="0,0,8,0">
+                        <TextBlock Text="{Binding BandCount, StringFormat='{}{0} bands'}" FontSize="11" Foreground="{DynamicResource TextSecondaryBrush}"/>
+                      </Border>
+                      <Button Grid.Column="3" Content="{Binding IsExpanded, Converter={StaticResource BoolToExpandConverter}}"
+                              Command="{Binding ToggleExpandCommand}" Padding="8,4" FontSize="11"
+                              Background="Transparent" BorderThickness="0" CornerRadius="6"/>
+                    </Grid>
+
+                    <!-- Expanded Details -->
+                    <Border IsVisible="{Binding IsExpanded}"
+                            Background="{DynamicResource SubtleBackgroundBrush}"
+                            CornerRadius="8" Padding="16" Margin="32,12,0,4">
+                      <StackPanel Spacing="10">
+                        <TextBlock Text="Frequency Bands" FontWeight="SemiBold" FontSize="13" Opacity="0.8"/>
+
+                        <Grid ColumnDefinitions="90,*" RowDefinitions="Auto,Auto,Auto,Auto" Margin="0,6,0,0">
+                          <!-- GSM -->
+                          <Border Grid.Row="0" Grid.Column="0" Background="#fce4ec" CornerRadius="6" Padding="8,4"
+                                  Margin="0,0,12,8" IsVisible="{Binding HasGsm}">
+                            <TextBlock Text="{Binding GsmCount, StringFormat='GSM ({0})'}" FontSize="11" Foreground="#c2185b" FontWeight="SemiBold"/>
+                          </Border>
+                          <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding GsmBands}" FontSize="12"
+                                     TextWrapping="Wrap" Opacity="0.8" IsVisible="{Binding HasGsm}"/>
+
+                          <!-- UMTS -->
+                          <Border Grid.Row="1" Grid.Column="0" Background="#fff3e0" CornerRadius="6" Padding="8,4"
+                                  Margin="0,0,12,8" IsVisible="{Binding HasUmts}">
+                            <TextBlock Text="{Binding UmtsCount, StringFormat='UMTS ({0})'}" FontSize="11" Foreground="#e65100" FontWeight="SemiBold"/>
+                          </Border>
+                          <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding UmtsBands}" FontSize="12"
+                                     TextWrapping="Wrap" Opacity="0.8" IsVisible="{Binding HasUmts}"/>
+
+                          <!-- LTE -->
+                          <Border Grid.Row="2" Grid.Column="0" Background="#e3f2fd" CornerRadius="6" Padding="8,4"
+                                  Margin="0,0,12,8" IsVisible="{Binding HasLte}">
+                            <TextBlock Text="{Binding LteCount, StringFormat='LTE ({0})'}" FontSize="11" Foreground="#1565c0" FontWeight="SemiBold"/>
+                          </Border>
+                          <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding LteBands}" FontSize="12"
+                                     TextWrapping="Wrap" Opacity="0.8" IsVisible="{Binding HasLte}"/>
+
+                          <!-- 5G NR -->
+                          <Border Grid.Row="3" Grid.Column="0" Background="#e8f5e9" CornerRadius="6" Padding="8,4"
+                                  Margin="0,0,12,8" IsVisible="{Binding Has5G}">
+                            <TextBlock Text="{Binding Nr5GCount, StringFormat='5G NR ({0})'}" FontSize="11" Foreground="#2e7d32" FontWeight="SemiBold"/>
+                          </Border>
+                          <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Nr5GBands}" FontSize="12"
+                                     TextWrapping="Wrap" Opacity="0.8" IsVisible="{Binding Has5G}"/>
+                        </Grid>
+                      </StackPanel>
+                    </Border>
+                  </StackPanel>
+                </Border>
+              </DataTemplate>
+            </ListBox.ItemTemplate>
+          </ListBox>
+        </Grid>
+      </Border>
+
+      <!-- Results -->
+      <Border Grid.Column="1" Background="{DynamicResource CardBackgroundBrush}" CornerRadius="12" Padding="20"
+              BorderBrush="{DynamicResource CardBorderBrush}" BorderThickness="1" Margin="10,0,0,0">
+        <ScrollViewer>
+          <StackPanel Spacing="20">
+            <StackPanel Orientation="Horizontal" Spacing="8">
+              <TextBlock Text="NAD Recommendations" FontSize="18" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+              <Border Background="{DynamicResource SubtleBackgroundBrush}" CornerRadius="10" Padding="8,4"
+                      IsVisible="{Binding Recommendations.Count, Converter={StaticResource IsGreaterThanZeroConverter}}">
+                <TextBlock Text="{Binding Recommendations.Count}" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}"/>
+              </Border>
+            </StackPanel>
+
+            <!-- Summary -->
+            <Border Background="{Binding HasPerfectMatch, Converter={StaticResource PerfectMatchBackgroundConverter}}"
+                    CornerRadius="12" Padding="20"
+                    IsVisible="{Binding Summary, Converter={x:Static StringConverters.IsNotNullOrEmpty}}">
+              <TextBlock Text="{Binding Summary}" TextWrapping="Wrap" FontWeight="SemiBold" FontSize="14"/>
+            </Border>
+
+            <!-- Top Recommendations -->
+            <StackPanel Spacing="12">
+              <TextBlock Text="Top NAD Modules" FontWeight="SemiBold" Opacity="0.6" FontSize="13"/>
+
+              <ItemsControl ItemsSource="{Binding Recommendations}">
+                <ItemsControl.ItemTemplate>
+                  <DataTemplate x:DataType="vm:NadRecommendationItem">
+                    <Border Background="{DynamicResource CardSecondaryBackgroundBrush}"
+                            CornerRadius="12" Padding="16" Margin="0,6"
+                            BorderBrush="{DynamicResource CardBorderBrush}" BorderThickness="1">
+                      <StackPanel>
+                        <!-- Main recommendation row -->
+                        <Grid ColumnDefinitions="*,Auto,Auto">
+                          <StackPanel Spacing="6">
+                            <TextBlock Text="{Binding Nad.Name}" FontWeight="Bold" FontSize="16"/>
+                            <TextBlock Text="{Binding RecommendationReason}" TextWrapping="Wrap"
+                                       Opacity="0.7" FontSize="12" FontStyle="Italic"/>
+                            <StackPanel Orientation="Horizontal" Spacing="12" Margin="0,6,0,0">
+                              <StackPanel Orientation="Horizontal" Spacing="4">
+                                <Ellipse Width="8" Height="8" Fill="#4caf50"/>
+                                <TextBlock FontSize="12" Foreground="#4caf50"
+                                           Text="{Binding CoveredCountries.Count, StringFormat='Covered: {0}'}"/>
+                              </StackPanel>
+                              <StackPanel Orientation="Horizontal" Spacing="4" IsVisible="{Binding HasMissingInfo}">
+                                <Ellipse Width="8" Height="8" Fill="#ff9800"/>
+                                <TextBlock FontSize="12" Foreground="#ff9800"
+                                           Text="{Binding PartiallyCoveredCountries.Count, StringFormat='Partial: {0}'}"/>
+                              </StackPanel>
+                            </StackPanel>
+
+                            <!-- Coverage Issues -->
+                            <Border Background="#fff3e0" CornerRadius="10" Padding="12" Margin="0,8,0,0"
+                                    IsVisible="{Binding HasMissingInfo}">
+                              <StackPanel Spacing="8">
+                                <TextBlock Text="Coverage Issues:" FontSize="12" FontWeight="SemiBold"
+                                           Foreground="#e65100"/>
+                                <ItemsControl ItemsSource="{Binding CountryMissingBands}">
+                                  <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="vm:CountryMissingBandsInfo">
+                                      <Border Background="#fff8e1" CornerRadius="8" Padding="10" Margin="0,4">
+                                        <StackPanel Spacing="4">
+                                          <Grid ColumnDefinitions="*,Auto">
+                                            <TextBlock Text="{Binding CountryName}" FontWeight="SemiBold" FontSize="12"/>
+                                            <Border Grid.Column="1" Background="#ffcc80" CornerRadius="6" Padding="6,2">
+                                              <TextBlock FontSize="10" Foreground="#e65100"
+                                                         Text="{Binding MatchPercentage, StringFormat='{}{0:F0}%'}"/>
+                                            </Border>
+                                          </Grid>
+                                          <TextBlock Text="{Binding MissingLteBands, StringFormat='LTE: {0}'}"
+                                                     FontSize="11" Foreground="#1565c0" TextWrapping="Wrap"
+                                                     IsVisible="{Binding HasMissingLte}"/>
+                                          <TextBlock Text="{Binding MissingUmtsBands, StringFormat='UMTS: {0}'}"
+                                                     FontSize="11" Foreground="#e65100" TextWrapping="Wrap"
+                                                     IsVisible="{Binding HasMissingUmts}"/>
+                                          <TextBlock Text="{Binding MissingGsmBands, StringFormat='GSM: {0}'}"
+                                                     FontSize="11" Foreground="#c2185b" TextWrapping="Wrap"
+                                                     IsVisible="{Binding HasMissingGsm}"/>
+                                          <TextBlock Text="{Binding Missing5GBands, StringFormat='5G: {0}'}"
+                                                     FontSize="11" Foreground="#2e7d32" TextWrapping="Wrap"
+                                                     IsVisible="{Binding HasMissing5G}"/>
+                                        </StackPanel>
+                                      </Border>
+                                    </DataTemplate>
+                                  </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                              </StackPanel>
+                            </Border>
+                          </StackPanel>
+
+                          <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                      Margin="16,0" Width="80">
+                            <TextBlock Text="{Binding CoveragePercentage, StringFormat='{}{0:F0}%'}"
+                                       FontSize="28" FontWeight="Bold" HorizontalAlignment="Center"
+                                       Foreground="{Binding CoveragePercentage, Converter={StaticResource PercentageToColorConverter}}"/>
+                            <TextBlock Text="Coverage" HorizontalAlignment="Center" Opacity="0.6" FontSize="11"/>
+                          </StackPanel>
+
+                          <Button Grid.Column="2" Content="{Binding IsExpanded, Converter={StaticResource BoolToExpandConverter}}"
+                                  Command="{Binding ToggleExpandCommand}" Padding="8,4" FontSize="11"
+                                  Background="Transparent" BorderThickness="0" VerticalAlignment="Top"
+                                  CornerRadius="6"/>
+                        </Grid>
+
+                        <!-- Expanded NAD Details -->
+                        <Border IsVisible="{Binding IsExpanded}"
+                                Background="{DynamicResource SubtleBackgroundBrush}"
+                                CornerRadius="10" Padding="16" Margin="0,16,0,0">
+                          <StackPanel Spacing="16">
+                            <!-- NAD Info -->
+                            <TextBlock Text="Module Details" FontWeight="SemiBold" FontSize="13" Foreground="#1976d2"/>
+                            <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto,Auto">
+                              <StackPanel Grid.Row="0" Grid.Column="0" Spacing="4" Margin="0,0,12,12">
+                                <TextBlock Text="Category" FontSize="11" Opacity="0.6"/>
+                                <TextBlock Text="{Binding Category}" FontSize="13" FontWeight="SemiBold"/>
+                              </StackPanel>
+                              <StackPanel Grid.Row="0" Grid.Column="1" Spacing="4" Margin="0,0,12,12">
+                                <TextBlock Text="Form Factor" FontSize="11" Opacity="0.6"/>
+                                <TextBlock Text="{Binding FormFactor}" FontSize="13" FontWeight="SemiBold"/>
+                              </StackPanel>
+                              <StackPanel Grid.Row="0" Grid.Column="2" Spacing="4" Margin="0,0,0,12">
+                                <TextBlock Text="Chipset" FontSize="11" Opacity="0.6"/>
+                                <TextBlock Text="{Binding Chipset}" FontSize="13" FontWeight="SemiBold"/>
+                              </StackPanel>
+
+                              <StackPanel Grid.Row="1" Grid.Column="0" Spacing="4" Margin="0,0,12,12">
+                                <TextBlock Text="Max Downlink" FontSize="11" Opacity="0.6"/>
+                                <TextBlock Text="{Binding MaxDownlink, StringFormat='{}{0} Mbps'}" FontSize="13" FontWeight="SemiBold"/>
+                              </StackPanel>
+                              <StackPanel Grid.Row="1" Grid.Column="1" Spacing="4" Margin="0,0,12,12">
+                                <TextBlock Text="Max Uplink" FontSize="11" Opacity="0.6"/>
+                                <TextBlock Text="{Binding MaxUplink, StringFormat='{}{0} Mbps'}" FontSize="13" FontWeight="SemiBold"/>
+                              </StackPanel>
+                              <StackPanel Grid.Row="1" Grid.Column="2" Spacing="4" Margin="0,0,0,12">
+                                <TextBlock Text="Target Region" FontSize="11" Opacity="0.6"/>
+                                <TextBlock Text="{Binding TargetRegion}" FontSize="13" FontWeight="SemiBold"/>
+                              </StackPanel>
+
+                              <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Spacing="4">
+                                <TextBlock Text="Technologies" FontSize="11" Opacity="0.6"/>
+                                <StackPanel Orientation="Horizontal" Spacing="6">
+                                  <Border Background="#e8f5e9" CornerRadius="6" Padding="10,5" IsVisible="{Binding Supports5G}">
+                                    <TextBlock Text="5G" FontSize="11" Foreground="#2e7d32" FontWeight="SemiBold"/>
+                                  </Border>
+                                  <Border Background="#e3f2fd" CornerRadius="6" Padding="10,5" IsVisible="{Binding SupportsLte}">
+                                    <TextBlock Text="LTE" FontSize="11" Foreground="#1565c0" FontWeight="SemiBold"/>
+                                  </Border>
+                                  <Border Background="#fff3e0" CornerRadius="6" Padding="10,5" IsVisible="{Binding SupportsUmts}">
+                                    <TextBlock Text="UMTS" FontSize="11" Foreground="#e65100" FontWeight="SemiBold"/>
+                                  </Border>
+                                  <Border Background="#fce4ec" CornerRadius="6" Padding="10,5" IsVisible="{Binding SupportsGsm}">
+                                    <TextBlock Text="GSM" FontSize="11" Foreground="#c2185b" FontWeight="SemiBold"/>
+                                  </Border>
+                                </StackPanel>
+                              </StackPanel>
+                            </Grid>
+
+                            <!-- Bands -->
+                            <TextBlock Text="Supported Bands" FontWeight="SemiBold" FontSize="13" Foreground="#1976d2"/>
+                            <Grid ColumnDefinitions="90,*" RowDefinitions="Auto,Auto,Auto,Auto">
+                              <Border Grid.Row="0" Grid.Column="0" Background="#fce4ec" CornerRadius="6" Padding="8,5"
+                                      Margin="0,0,12,8" IsVisible="{Binding SupportsGsm}">
+                                <TextBlock Text="GSM" FontSize="11" Foreground="#c2185b" FontWeight="SemiBold"/>
+                              </Border>
+                              <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding GsmBands}" FontSize="12"
+                                         TextWrapping="Wrap" Opacity="0.8" IsVisible="{Binding SupportsGsm}"/>
+
+                              <Border Grid.Row="1" Grid.Column="0" Background="#fff3e0" CornerRadius="6" Padding="8,5"
+                                      Margin="0,0,12,8" IsVisible="{Binding SupportsUmts}">
+                                <TextBlock Text="UMTS" FontSize="11" Foreground="#e65100" FontWeight="SemiBold"/>
+                              </Border>
+                              <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding UmtsBands}" FontSize="12"
+                                         TextWrapping="Wrap" Opacity="0.8" IsVisible="{Binding SupportsUmts}"/>
+
+                              <Border Grid.Row="2" Grid.Column="0" Background="#e3f2fd" CornerRadius="6" Padding="8,5"
+                                      Margin="0,0,12,8" IsVisible="{Binding SupportsLte}">
+                                <TextBlock Text="LTE" FontSize="11" Foreground="#1565c0" FontWeight="SemiBold"/>
+                              </Border>
+                              <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding LteBands}" FontSize="12"
+                                         TextWrapping="Wrap" Opacity="0.8" IsVisible="{Binding SupportsLte}"/>
+
+                              <Border Grid.Row="3" Grid.Column="0" Background="#e8f5e9" CornerRadius="6" Padding="8,5"
+                                      Margin="0,0,12,8" IsVisible="{Binding Supports5G}">
+                                <TextBlock Text="5G NR" FontSize="11" Foreground="#2e7d32" FontWeight="SemiBold"/>
+                              </Border>
+                              <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Nr5GBands}" FontSize="12"
+                                         TextWrapping="Wrap" Opacity="0.8" IsVisible="{Binding Supports5G}"/>
+                            </Grid>
+
+                            <!-- Features -->
+                            <StackPanel Spacing="4" IsVisible="{Binding Features, Converter={x:Static StringConverters.IsNotNullOrEmpty}}">
+                              <TextBlock Text="Features" FontSize="11" Opacity="0.6"/>
+                              <TextBlock Text="{Binding Features}" FontSize="12"/>
+                            </StackPanel>
+                          </StackPanel>
+                        </Border>
+                      </StackPanel>
+                    </Border>
+                  </DataTemplate>
+                </ItemsControl.ItemTemplate>
+              </ItemsControl>
+            </StackPanel>
+
+            <!-- Combination Recommendations -->
+            <StackPanel Spacing="12" IsVisible="{Binding CombinationRecommendations.Count, Converter={StaticResource IsGreaterThanZeroConverter}}">
+              <TextBlock Text="NAD Combinations for Full Coverage" FontWeight="SemiBold" Opacity="0.6" FontSize="13"/>
+
+              <ItemsControl ItemsSource="{Binding CombinationRecommendations}">
+                <ItemsControl.ItemTemplate>
+                  <DataTemplate>
+                    <Border Background="#e8f5e9" CornerRadius="12" Padding="16" Margin="0,6"
+                            BorderBrush="#a5d6a7" BorderThickness="1">
+                      <StackPanel Spacing="10">
+                        <Grid ColumnDefinitions="*,Auto">
+                          <TextBlock Text="{Binding TotalCoveragePercentage, StringFormat='Combined Coverage: {0:F0}%'}"
+                                     FontWeight="Bold" FontSize="14" Foreground="#2e7d32"/>
+                          <Border Grid.Column="1" Background="#c8e6c9" CornerRadius="8" Padding="8,4">
+                            <TextBlock Foreground="#2e7d32" FontSize="12" FontWeight="SemiBold"
+                                       Text="{Binding Nads.Count, StringFormat='{}{0} modules'}"/>
+                          </Border>
+                        </Grid>
+
+                        <ItemsControl ItemsSource="{Binding Nads}">
+                          <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                              <WrapPanel/>
+                            </ItemsPanelTemplate>
+                          </ItemsControl.ItemsPanel>
+                          <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                              <Border Background="#c8e6c9" CornerRadius="8" Padding="12,6" Margin="0,0,8,6">
+                                <TextBlock Text="{Binding Name}" FontSize="12" FontWeight="SemiBold" Foreground="#1b5e20"/>
+                              </Border>
+                            </DataTemplate>
+                          </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                      </StackPanel>
+                    </Border>
+                  </DataTemplate>
+                </ItemsControl.ItemTemplate>
+              </ItemsControl>
+            </StackPanel>
+
+            <!-- Empty state -->
+            <Border Background="{DynamicResource SubtleBackgroundBrush}" CornerRadius="12" Padding="32"
+                    IsVisible="{Binding !Recommendations.Count, Converter={StaticResource IsGreaterThanZeroConverter}}"
+                    HorizontalAlignment="Center" Margin="0,20">
+              <StackPanel Spacing="8" HorizontalAlignment="Center">
+                <TextBlock Text="No recommendations yet" FontSize="16" FontWeight="SemiBold"
+                           HorizontalAlignment="Center" Foreground="{DynamicResource TextSecondaryBrush}"/>
+                <TextBlock Text="Select countries and click Analyze to see recommendations."
+                           Foreground="{DynamicResource TextSecondaryBrush}" FontSize="13" HorizontalAlignment="Center"/>
+              </StackPanel>
+            </Border>
+          </StackPanel>
+        </ScrollViewer>
+      </Border>
+    </Grid>
+
+    <!-- Status bar -->
+    <Border Grid.Row="2" Background="{DynamicResource CardSecondaryBackgroundBrush}"
+            Padding="20,12" BorderBrush="{DynamicResource CardBorderBrush}" BorderThickness="0,1,0,0">
+      <Grid ColumnDefinitions="*,Auto">
+        <TextBlock Text="{Binding StatusMessage}" VerticalAlignment="Center" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}"/>
+        <ProgressBar Grid.Column="1" IsIndeterminate="True" Width="120" Height="4"
+                     IsVisible="{Binding IsLoading}"/>
+      </Grid>
+    </Border>
+  </Grid>
+</UserControl>

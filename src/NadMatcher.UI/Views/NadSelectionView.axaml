@@ -1,0 +1,157 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:NadMatcher.UI.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="600"
+             x:Class="NadMatcher.UI.Views.NadSelectionView"
+             x:DataType="vm:NadSelectionViewModel">
+
+  <Grid RowDefinitions="Auto,*,Auto" Background="{DynamicResource AppBackgroundBrush}">
+    <!-- Header with filters -->
+    <Border Grid.Row="0" Background="{DynamicResource CardSecondaryBackgroundBrush}" Padding="20">
+      <StackPanel Spacing="16">
+        <TextBlock Text="NAD Module Selection" FontSize="22" FontWeight="Bold"/>
+        <TextBlock Text="Select a NAD module to see which countries are compatible with its frequency bands."
+                   TextWrapping="Wrap" Opacity="0.7"/>
+
+        <Grid ColumnDefinitions="Auto,200,Auto,*">
+          <TextBlock Text="Filter by Manufacturer:" VerticalAlignment="Center" Margin="0,0,12,0" FontWeight="SemiBold"/>
+          <ComboBox Grid.Column="1"
+                    ItemsSource="{Binding Manufacturers}"
+                    SelectedItem="{Binding SelectedManufacturer}"
+                    PlaceholderText="All Manufacturers"
+                    CornerRadius="8"/>
+
+          <TextBlock Grid.Column="2" Text="NAD Modules:" VerticalAlignment="Center" Margin="20,0,12,0" FontWeight="SemiBold"/>
+          <ComboBox Grid.Column="3"
+                    ItemsSource="{Binding NadModules}"
+                    SelectedItem="{Binding SelectedNad}"
+                    PlaceholderText="Select NAD Module..."
+                    HorizontalAlignment="Stretch"
+                    CornerRadius="8">
+            <ComboBox.ItemTemplate>
+              <DataTemplate>
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                  <TextBlock Text="{Binding Name}" FontWeight="SemiBold"/>
+                  <TextBlock Text="-" Opacity="0.5"/>
+                  <TextBlock Text="{Binding Category}" Opacity="0.7"/>
+                  <TextBlock Text="|" Opacity="0.3"/>
+                  <TextBlock Text="{Binding TargetRegion}" Foreground="#1976d2"/>
+                </StackPanel>
+              </DataTemplate>
+            </ComboBox.ItemTemplate>
+          </ComboBox>
+        </Grid>
+      </StackPanel>
+    </Border>
+
+    <!-- Main content -->
+    <Grid Grid.Row="1" ColumnDefinitions="*,*" Margin="20,16">
+      <!-- Selected NAD Details -->
+      <Border Grid.Column="0" Background="{DynamicResource CardBackgroundBrush}" CornerRadius="12" Padding="20"
+              BorderBrush="{DynamicResource CardBorderBrush}" BorderThickness="1" Margin="0,0,10,0">
+        <ScrollViewer>
+          <StackPanel Spacing="16" IsVisible="{Binding SelectedNad, Converter={x:Static ObjectConverters.IsNotNull}}">
+            <TextBlock Text="Selected NAD Details" FontSize="18" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+
+            <Border Background="{DynamicResource SubtleBackgroundBrush}" CornerRadius="10" Padding="16">
+              <StackPanel Spacing="8">
+                <TextBlock Text="{Binding SelectedNad.Name}" FontSize="20" FontWeight="Bold" Foreground="#1976d2"/>
+                <TextBlock Text="{Binding SelectedNad.Manufacturer}" Opacity="0.7"/>
+                <TextBlock Text="{Binding SelectedNad.Category}" FontSize="13"/>
+              </StackPanel>
+            </Border>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto">
+              <StackPanel Grid.Row="0" Grid.Column="0" Spacing="4" Margin="0,0,12,16">
+                <TextBlock Text="Form Factor" FontSize="11" Opacity="0.6"/>
+                <TextBlock Text="{Binding SelectedNad.FormFactor}" FontSize="13" FontWeight="SemiBold"/>
+              </StackPanel>
+              <StackPanel Grid.Row="0" Grid.Column="1" Spacing="4" Margin="0,0,0,16">
+                <TextBlock Text="Chipset" FontSize="11" Opacity="0.6"/>
+                <TextBlock Text="{Binding SelectedNad.Chipset}" FontSize="13" FontWeight="SemiBold"/>
+              </StackPanel>
+              <StackPanel Grid.Row="1" Grid.Column="0" Spacing="4" Margin="0,0,12,16">
+                <TextBlock Text="Max Downlink" FontSize="11" Opacity="0.6"/>
+                <TextBlock Text="{Binding SelectedNad.MaxDownlinkMbps, StringFormat='{}{0} Mbps'}" FontSize="13" FontWeight="SemiBold"/>
+              </StackPanel>
+              <StackPanel Grid.Row="1" Grid.Column="1" Spacing="4" Margin="0,0,0,16">
+                <TextBlock Text="Max Uplink" FontSize="11" Opacity="0.6"/>
+                <TextBlock Text="{Binding SelectedNad.MaxUplinkMbps, StringFormat='{}{0} Mbps'}" FontSize="13" FontWeight="SemiBold"/>
+              </StackPanel>
+              <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Spacing="4">
+                <TextBlock Text="Target Region" FontSize="11" Opacity="0.6"/>
+                <TextBlock Text="{Binding SelectedNad.TargetRegion}" FontSize="13" FontWeight="SemiBold"/>
+              </StackPanel>
+            </Grid>
+
+            <TextBlock Text="Supported Technologies" FontSize="14" FontWeight="Bold" Margin="0,8,0,0"/>
+            <StackPanel Orientation="Horizontal" Spacing="8">
+              <Border Background="#e8f5e9" CornerRadius="6" Padding="12,6" IsVisible="{Binding SelectedNad.Supports5G}">
+                <TextBlock Text="5G" Foreground="#2e7d32" FontWeight="SemiBold"/>
+              </Border>
+              <Border Background="#e3f2fd" CornerRadius="6" Padding="12,6" IsVisible="{Binding SelectedNad.SupportsLte}">
+                <TextBlock Text="LTE" Foreground="#1565c0" FontWeight="SemiBold"/>
+              </Border>
+              <Border Background="#fff3e0" CornerRadius="6" Padding="12,6" IsVisible="{Binding SelectedNad.SupportsUmts}">
+                <TextBlock Text="UMTS" Foreground="#e65100" FontWeight="SemiBold"/>
+              </Border>
+              <Border Background="#fce4ec" CornerRadius="6" Padding="12,6" IsVisible="{Binding SelectedNad.SupportsGsm}">
+                <TextBlock Text="GSM" Foreground="#c2185b" FontWeight="SemiBold"/>
+              </Border>
+            </StackPanel>
+          </StackPanel>
+        </ScrollViewer>
+      </Border>
+
+      <!-- Compatible Countries -->
+      <Border Grid.Column="1" Background="{DynamicResource CardBackgroundBrush}" CornerRadius="12" Padding="20"
+              BorderBrush="{DynamicResource CardBorderBrush}" BorderThickness="1" Margin="10,0,0,0">
+        <Grid RowDefinitions="Auto,Auto,*">
+          <TextBlock Text="Compatible Countries" FontSize="18" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+
+          <TextBlock Grid.Row="1" Text="{Binding Summary}" TextWrapping="Wrap"
+                     Margin="0,12,0,12" Foreground="#1976d2" FontStyle="Italic"
+                     IsVisible="{Binding Summary, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
+
+          <ListBox Grid.Row="2" ItemsSource="{Binding MatchResults}"
+                   Background="Transparent" BorderThickness="0">
+            <ListBox.ItemTemplate>
+              <DataTemplate>
+                <Border Background="{Binding OverallMatchPercentage, Converter={StaticResource PercentageToBackgroundConverter}}"
+                        CornerRadius="10" Padding="16" Margin="0,4">
+                  <Grid ColumnDefinitions="*,Auto">
+                    <StackPanel Spacing="6">
+                      <TextBlock Text="{Binding EntityName}" FontWeight="SemiBold" FontSize="14"/>
+                      <StackPanel Orientation="Horizontal" Spacing="16">
+                        <TextBlock Opacity="0.7" FontSize="12" Text="{Binding LteMatch.MatchPercentage, StringFormat='LTE: {0:F0}%'}"/>
+                        <TextBlock Opacity="0.7" FontSize="12" Text="{Binding Nr5GMatch.MatchPercentage, StringFormat='5G: {0:F0}%'}"/>
+                      </StackPanel>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center">
+                      <TextBlock Text="{Binding OverallMatchPercentage, StringFormat='{}{0:F0}%'}"
+                                 FontSize="24" FontWeight="Bold"
+                                 Foreground="{Binding OverallMatchPercentage, Converter={StaticResource PercentageToColorConverter}}"/>
+                      <TextBlock Text="Match" HorizontalAlignment="Center" Opacity="0.6" FontSize="10"/>
+                    </StackPanel>
+                  </Grid>
+                </Border>
+              </DataTemplate>
+            </ListBox.ItemTemplate>
+          </ListBox>
+        </Grid>
+      </Border>
+    </Grid>
+
+    <!-- Status bar -->
+    <Border Grid.Row="2" Background="{DynamicResource CardSecondaryBackgroundBrush}"
+            Padding="20,12" BorderBrush="{DynamicResource CardBorderBrush}" BorderThickness="0,1,0,0">
+      <Grid ColumnDefinitions="*,Auto">
+        <TextBlock Text="{Binding StatusMessage}" VerticalAlignment="Center" FontSize="13"/>
+        <ProgressBar Grid.Column="1" IsIndeterminate="True" Width="120" Height="4"
+                     IsVisible="{Binding IsLoading}"/>
+      </Grid>
+    </Border>
+  </Grid>
+</UserControl>

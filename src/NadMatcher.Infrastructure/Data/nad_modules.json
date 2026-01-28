@@ -1,0 +1,2379 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-01-28",
+    "source": "Master Fermi Platform RF Band Table 11Nov2024",
+    "total_modules": 56
+  },
+  "manufacturers": [],
+  "modules_by_region": {
+    "North America": [
+      {
+        "id": "FE5NAX010",
+        "manufacturer": "",
+        "name": "FE5NAX010",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n77"
+          ],
+          "LTE": [
+            "5CC",
+            "B12",
+            "B13",
+            "B14",
+            "B28",
+            "B29",
+            "B5",
+            "B71"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": []
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "C-V2X + GNSS L1/L5"
+      },
+      {
+        "id": "FE5NAX011",
+        "manufacturer": "",
+        "name": "FE5NAX011",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n77"
+          ],
+          "LTE": [
+            "B12",
+            "B13",
+            "B14",
+            "B28",
+            "B29",
+            "B5",
+            "B71"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": []
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "C-V2X + GNSS L1"
+      },
+      {
+        "id": "FE5NA0010",
+        "manufacturer": "",
+        "name": "FE5NA0010",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n77"
+          ],
+          "LTE": [
+            "B12",
+            "B13",
+            "B14",
+            "B28",
+            "B29",
+            "B5",
+            "B71"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": []
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "GNSS L1/L5"
+      },
+      {
+        "id": "FE5NA0011",
+        "manufacturer": "",
+        "name": "FE5NA0011",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n77"
+          ],
+          "LTE": [
+            "B12",
+            "B13",
+            "B14",
+            "B28",
+            "B29",
+            "B5",
+            "B71"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": []
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No GNSS L5"
+      },
+      {
+        "id": "FE5NA0020",
+        "manufacturer": "",
+        "name": "FE5NA0020",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n77"
+          ],
+          "LTE": [
+            "B12",
+            "B13",
+            "B14",
+            "B17",
+            "B26",
+            "B29",
+            "B5",
+            "B71"
+          ],
+          "UMTS": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B6"
+          ],
+          "GSM": [
+            "B2",
+            "B3",
+            "B5",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No C-V2X"
+      },
+      {
+        "id": "FE5NAR131",
+        "manufacturer": "",
+        "name": "FE5NAR131",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n77",
+            "n78"
+          ],
+          "LTE": [
+            "5CC",
+            "B12",
+            "B13",
+            "B14",
+            "B17",
+            "B26",
+            "B28",
+            "B29",
+            "B5",
+            "B71"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": [
+            "B2",
+            "B5"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5NAR191",
+        "manufacturer": "",
+        "name": "FE5NAR191",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n77",
+            "n78"
+          ],
+          "LTE": [
+            "5CC",
+            "B12",
+            "B13",
+            "B14",
+            "B17",
+            "B26",
+            "B28",
+            "B29",
+            "B5",
+            "B71"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": [
+            "B2",
+            "B5"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5NAR180",
+        "manufacturer": "",
+        "name": "FE5NAR180",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n77",
+            "n78"
+          ],
+          "LTE": [
+            "5CC",
+            "B12",
+            "B13",
+            "B14",
+            "B17",
+            "B26",
+            "B28",
+            "B29",
+            "B5",
+            "B71"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": []
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5NAR110",
+        "manufacturer": "",
+        "name": "FE5NAR110",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n77"
+          ],
+          "LTE": [
+            "B12",
+            "B13",
+            "B14",
+            "B28",
+            "B29",
+            "B5",
+            "B71"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": []
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5NAR111",
+        "manufacturer": "",
+        "name": "FE5NAR111",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n77"
+          ],
+          "LTE": [
+            "B12",
+            "B13",
+            "B14",
+            "B28",
+            "B29",
+            "B5",
+            "B71"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": []
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5NAR121",
+        "manufacturer": "",
+        "name": "FE5NAR121",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n77"
+          ],
+          "LTE": [
+            "B12",
+            "B13",
+            "B14",
+            "B17",
+            "B26",
+            "B29",
+            "B5",
+            "B71",
+            "n41",
+            "n77"
+          ],
+          "UMTS": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B6"
+          ],
+          "GSM": [
+            "B2",
+            "B3",
+            "B5",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5NA0D31",
+        "manufacturer": "",
+        "name": "FE5NA0D31",
+        "category": "5G DSDA TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B12",
+            "B13",
+            "B14",
+            "B17",
+            "B26",
+            "B28",
+            "B29",
+            "B5",
+            "B71"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": [
+            "B2",
+            "B5"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "NAFTA High 2x2 DL, L1"
+      },
+      {
+        "id": "FE4NAX210",
+        "manufacturer": "",
+        "name": "FE4NAX210",
+        "category": "LTE Cat 9 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 450,
+        "max_uplink_mbps": 75,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B12",
+            "B13",
+            "B14",
+            "B2",
+            "B28",
+            "B29",
+            "B30",
+            "B4",
+            "B47",
+            "B5",
+            "B66"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": []
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "C-V2X + L1/L5\nECP-140 cancelled 4.5G C-V2X"
+      },
+      {
+        "id": "FE4NAX110",
+        "manufacturer": "",
+        "name": "FE4NAX110",
+        "category": "LTE Cat 9 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 450,
+        "max_uplink_mbps": 75,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B12",
+            "B13",
+            "B14",
+            "B2",
+            "B28",
+            "B29",
+            "B30",
+            "B4",
+            "B47",
+            "B5",
+            "B66"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": []
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "C-V2X + L1\nECP-140 cancelled 4.5G C-V2X"
+      },
+      {
+        "id": "FE4NA0210",
+        "manufacturer": "",
+        "name": "FE4NA0210",
+        "category": "LTE Cat 9 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 450,
+        "max_uplink_mbps": 75,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B12",
+            "B13",
+            "B14",
+            "B2",
+            "B28",
+            "B29",
+            "B30",
+            "B4",
+            "B5",
+            "B66",
+            "De-Pop'ed"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": []
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No C-V2X + L1/L5"
+      },
+      {
+        "id": "FE4NA0110",
+        "manufacturer": "",
+        "name": "FE4NA0110",
+        "category": "LTE Cat 9 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 450,
+        "max_uplink_mbps": 75,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B12",
+            "B13",
+            "B14",
+            "B2",
+            "B28",
+            "B29",
+            "B30",
+            "B4",
+            "B5",
+            "B66",
+            "De-Pop'ed"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": []
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No C-V2X + L1"
+      },
+      {
+        "id": "FE3NA0031",
+        "manufacturer": "",
+        "name": "FE3NA0031",
+        "category": "LTE Cat 4 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 150,
+        "max_uplink_mbps": 50,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B12",
+            "B13",
+            "B5"
+          ],
+          "UMTS": [
+            "B2",
+            "B4",
+            "B5"
+          ],
+          "GSM": [
+            "B2",
+            "B5"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "Customer wants formal certification w/ T-Mobile."
+      }
+    ],
+    "Rest of World": [
+      {
+        "id": "FE5RW0011",
+        "manufacturer": "",
+        "name": "FE5RW0011",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B20",
+            "B28",
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B8"
+          ],
+          "GSM": [
+            "B2",
+            "B3",
+            "B5",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No GNSS L5"
+      },
+      {
+        "id": "FE5RWR131",
+        "manufacturer": "",
+        "name": "FE5RWR131",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n78",
+            "n79"
+          ],
+          "LTE": [
+            "5CC",
+            "B18",
+            "B19",
+            "B20",
+            "B26",
+            "B28",
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B19",
+            "B3",
+            "B5",
+            "B8",
+            "B9"
+          ],
+          "GSM": [
+            "B2",
+            "B3",
+            "B5",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5RWR180",
+        "manufacturer": "",
+        "name": "FE5RWR180",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n78",
+            "n79"
+          ],
+          "LTE": [
+            "5CC",
+            "B18",
+            "B19",
+            "B20",
+            "B26",
+            "B28",
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B19",
+            "B3",
+            "B5",
+            "B8",
+            "B9"
+          ],
+          "GSM": [
+            "B2",
+            "B3",
+            "B5",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5RW0D31",
+        "manufacturer": "",
+        "name": "FE5RW0D31",
+        "category": "5G DSDA TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B18",
+            "B19",
+            "B20",
+            "B26",
+            "B28",
+            "B5",
+            "B6",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B19",
+            "B3",
+            "B5",
+            "B6",
+            "B8",
+            "B9"
+          ],
+          "GSM": [
+            "B2",
+            "B3",
+            "B5",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "RoW High 2x2 DL, L1"
+      },
+      {
+        "id": "FE4RW0110",
+        "manufacturer": "",
+        "name": "FE4RW0110",
+        "category": "LTE Cat 9 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 450,
+        "max_uplink_mbps": 75,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B1",
+            "B2",
+            "B20",
+            "B28",
+            "B3",
+            "B38",
+            "B4",
+            "B40",
+            "B41",
+            "B5",
+            "B7",
+            "B8",
+            "De-Pop'ed"
+          ],
+          "UMTS": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B8"
+          ],
+          "GSM": [
+            "B2",
+            "B3",
+            "B5",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No C-V2X + L1"
+      },
+      {
+        "id": "FE4RW0260",
+        "manufacturer": "",
+        "name": "FE4RW0260",
+        "category": "LTE Cat 9 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 450,
+        "max_uplink_mbps": 75,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B1",
+            "B2",
+            "B20",
+            "B28",
+            "B3",
+            "B38",
+            "B4",
+            "B40",
+            "B41",
+            "B5",
+            "B7",
+            "B8",
+            "De-Pop'ed"
+          ],
+          "UMTS": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B8"
+          ],
+          "GSM": [
+            "B2",
+            "B3",
+            "B5",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No C-V2X + L1/L5"
+      },
+      {
+        "id": "FE3RW0051",
+        "manufacturer": "",
+        "name": "FE3RW0051",
+        "category": "LTE Cat 4 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 150,
+        "max_uplink_mbps": 50,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B28",
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B6",
+            "B8"
+          ],
+          "GSM": [
+            "B2",
+            "B3",
+            "B5",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE3RW0031",
+        "manufacturer": "",
+        "name": "FE3RW0031",
+        "category": "LTE Cat 4 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 150,
+        "max_uplink_mbps": 50,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B18",
+            "B19",
+            "B20",
+            "B26",
+            "B28",
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B6",
+            "B8"
+          ],
+          "GSM": [
+            "B2",
+            "B3",
+            "B5",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "LE1.7 software baseline does not support 8Gb/8Gb"
+      }
+    ],
+    "China": [
+      {
+        "id": "FE5CN0010",
+        "manufacturer": "",
+        "name": "FE5CN0010",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n79"
+          ],
+          "LTE": [
+            "B8"
+          ],
+          "UMTS": [],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No C-V2X + L1/L5"
+      },
+      {
+        "id": "FE5CN0011",
+        "manufacturer": "",
+        "name": "FE5CN0011",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n79"
+          ],
+          "LTE": [
+            "B8"
+          ],
+          "UMTS": [],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No C-V2X + L1"
+      },
+      {
+        "id": "FE5CNX010",
+        "manufacturer": "",
+        "name": "FE5CNX010",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n79"
+          ],
+          "LTE": [
+            "B8"
+          ],
+          "UMTS": [],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "C-V2X + L1/L5"
+      },
+      {
+        "id": "FE5CNX011",
+        "manufacturer": "",
+        "name": "FE5CNX011",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n79"
+          ],
+          "LTE": [
+            "B8"
+          ],
+          "UMTS": [],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "C-V2X + L1"
+      },
+      {
+        "id": "FE5CN0041",
+        "manufacturer": "",
+        "name": "FE5CN0041",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No C-V2X + L1"
+      },
+      {
+        "id": "FE5CN0020",
+        "manufacturer": "",
+        "name": "FE5CN0020",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n77",
+            "n78",
+            "n79"
+          ],
+          "LTE": [
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No CV2X + L1/L5"
+      },
+      {
+        "id": "FE5CNX020",
+        "manufacturer": "",
+        "name": "FE5CNX020",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "CV2X + L1/L5"
+      },
+      {
+        "id": "FE5CNX040",
+        "manufacturer": "",
+        "name": "FE5CNX040",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "C-V2X + L1/L5"
+      },
+      {
+        "id": "FE5CNX031",
+        "manufacturer": "",
+        "name": "FE5CNX031",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n78",
+            "n79"
+          ],
+          "LTE": [
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "CV2x + L1"
+      },
+      {
+        "id": "FE5CNX030",
+        "manufacturer": "",
+        "name": "FE5CNX030",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n78",
+            "n79"
+          ],
+          "LTE": [
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "CV2x + L1/L5"
+      },
+      {
+        "id": "FE5CNR111",
+        "manufacturer": "",
+        "name": "FE5CNR111",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n79"
+          ],
+          "LTE": [
+            "5CC",
+            "B8"
+          ],
+          "UMTS": [],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "GNSS L1\nB3 + n41 EN-DC"
+      },
+      {
+        "id": "FE5CNR140",
+        "manufacturer": "",
+        "name": "FE5CNR140",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n41",
+            "n78",
+            "n79"
+          ],
+          "LTE": [
+            "5CC",
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B2",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "GNSS L1/L5\nB3 + n41 EN-DC"
+      },
+      {
+        "id": "FE5CNR131",
+        "manufacturer": "",
+        "name": "FE5CNR131",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n78",
+            "n79"
+          ],
+          "LTE": [
+            "5CC",
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5CNR110",
+        "manufacturer": "",
+        "name": "FE5CNR110",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [],
+          "UMTS": [],
+          "GSM": []
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5CNR120",
+        "manufacturer": "",
+        "name": "FE5CNR120",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n77",
+            "n78",
+            "n79"
+          ],
+          "LTE": [
+            "B5",
+            "B8",
+            "n77",
+            "n78",
+            "n79"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5CNXD31",
+        "manufacturer": "",
+        "name": "FE5CNXD31",
+        "category": "5G DSDA TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "China High 2x2 DL + CV2X, L1"
+      },
+      {
+        "id": "FE5CN0D31",
+        "manufacturer": "",
+        "name": "FE5CN0D31",
+        "category": "5G DSDA TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "China High 2x2 DL + CV2X, L1"
+      },
+      {
+        "id": "FE4CN0110",
+        "manufacturer": "",
+        "name": "FE4CN0110",
+        "category": "LTE Cat 9 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 450,
+        "max_uplink_mbps": 75,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B3",
+            "B34",
+            "B38",
+            "B39",
+            "B40",
+            "B41",
+            "B8",
+            "De-Pop'ed"
+          ],
+          "UMTS": [],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No C-V2X + L1"
+      },
+      {
+        "id": "FE4CNX110",
+        "manufacturer": "",
+        "name": "FE4CNX110",
+        "category": "LTE Cat 9 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 450,
+        "max_uplink_mbps": 75,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B3",
+            "B34",
+            "B38",
+            "B39",
+            "B40",
+            "B41",
+            "B47",
+            "B8"
+          ],
+          "UMTS": [],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "C-V2X + L1"
+      },
+      {
+        "id": "FE4CNX210",
+        "manufacturer": "",
+        "name": "FE4CNX210",
+        "category": "LTE Cat 9 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 450,
+        "max_uplink_mbps": 75,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B3",
+            "B34",
+            "B38",
+            "B39",
+            "B40",
+            "B41",
+            "B47",
+            "B8"
+          ],
+          "UMTS": [],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "C-V2X + L1/L5"
+      },
+      {
+        "id": "FE4CN0210",
+        "manufacturer": "",
+        "name": "FE4CN0210",
+        "category": "LTE Cat 9 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 450,
+        "max_uplink_mbps": 75,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B3",
+            "B34",
+            "B38",
+            "B39",
+            "B40",
+            "B41",
+            "B8",
+            "De-Pop'ed"
+          ],
+          "UMTS": [],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No C-V2X + L1/L5"
+      },
+      {
+        "id": "FE3CN0051",
+        "manufacturer": "",
+        "name": "FE3CN0051",
+        "category": "LTE Cat 4 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 150,
+        "max_uplink_mbps": 50,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      }
+    ],
+    "Europe": [
+      {
+        "id": "FE5EU0020",
+        "manufacturer": "",
+        "name": "FE5EU0020",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B20",
+            "B28",
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B5",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No C-V2X"
+      },
+      {
+        "id": "FE5EUR131",
+        "manufacturer": "",
+        "name": "FE5EUR131",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n78"
+          ],
+          "LTE": [
+            "5CC",
+            "B20",
+            "B28",
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B5",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5EUR180",
+        "manufacturer": "",
+        "name": "FE5EUR180",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [
+            "n78"
+          ],
+          "LTE": [
+            "5CC",
+            "B20",
+            "B28",
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B5",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5EUR121",
+        "manufacturer": "",
+        "name": "FE5EUR121",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B20",
+            "B28",
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B5",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE5EU0D31",
+        "manufacturer": "",
+        "name": "FE5EU0D31",
+        "category": "5G DSDA TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B20",
+            "B28",
+            "B5",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B5",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "ECE High 2x2 DL, L1"
+      },
+      {
+        "id": "FE3EU0031",
+        "manufacturer": "",
+        "name": "FE3EU0031",
+        "category": "LTE Cat 4 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 150,
+        "max_uplink_mbps": 50,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B20",
+            "B28",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B3",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      }
+    ],
+    "Japan": [
+      {
+        "id": "FE5RW0020",
+        "manufacturer": "",
+        "name": "FE5RW0020",
+        "category": "5G TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B18",
+            "B19",
+            "B20",
+            "B26",
+            "B28",
+            "B5",
+            "B6",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B19",
+            "B3",
+            "B5",
+            "B6",
+            "B8",
+            "B9"
+          ],
+          "GSM": [
+            "B2",
+            "B3",
+            "B5",
+            "B8"
+          ]
+        },
+        "features": [
+          "C-V2X",
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "No C-V2X\nJapan SKU"
+      },
+      {
+        "id": "FE5RWR121",
+        "manufacturer": "",
+        "name": "FE5RWR121",
+        "category": "5G ReDTC TCU",
+        "technology": [
+          "5G NR",
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA515M",
+        "max_downlink_mbps": 2100,
+        "max_uplink_mbps": 900,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B18",
+            "B19",
+            "B20",
+            "B26",
+            "B28",
+            "B5",
+            "B6",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B19",
+            "B3",
+            "B5",
+            "B6",
+            "B8",
+            "B9"
+          ],
+          "GSM": [
+            "B2",
+            "B3",
+            "B5",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": ""
+      },
+      {
+        "id": "FE3JP0051",
+        "manufacturer": "",
+        "name": "FE3JP0051",
+        "category": "LTE Cat 4 TCU",
+        "technology": [
+          "LTE",
+          "UMTS",
+          "GSM"
+        ],
+        "form_factor": "52x52 mm",
+        "chipset": "SA415M",
+        "max_downlink_mbps": 150,
+        "max_uplink_mbps": 50,
+        "bands": {
+          "5G_NR": [],
+          "LTE": [
+            "B19",
+            "B28",
+            "B8"
+          ],
+          "UMTS": [
+            "B1",
+            "B19",
+            "B5",
+            "B6",
+            "B8"
+          ],
+          "GSM": [
+            "B3",
+            "B8"
+          ]
+        },
+        "features": [
+          "GNSS"
+        ],
+        "certifications": [],
+        "notes": "Project team don’t want B21 in JP variant, but still need to negotiate with customer. "
+      }
+    ]
+  }
+}

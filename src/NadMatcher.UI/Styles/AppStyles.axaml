@@ -1,0 +1,183 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!-- ========== ACCENT BUTTON ========== -->
+  <Style Selector="Button.accent">
+    <Setter Property="Background" Value="#1976d2"/>
+    <Setter Property="Foreground" Value="White"/>
+    <Setter Property="CornerRadius" Value="6"/>
+    <Setter Property="Padding" Value="16,10"/>
+    <Setter Property="FontWeight" Value="SemiBold"/>
+  </Style>
+
+  <Style Selector="Button.accent:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="#1565c0"/>
+  </Style>
+
+  <Style Selector="Button.accent:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="#0d47a1"/>
+  </Style>
+
+  <!-- ========== SECONDARY BUTTON ========== -->
+  <Style Selector="Button.secondary">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderBrush" Value="{DynamicResource CardBorderBrush}"/>
+    <Setter Property="BorderThickness" Value="1"/>
+    <Setter Property="CornerRadius" Value="6"/>
+    <Setter Property="Padding" Value="12,8"/>
+  </Style>
+
+  <!-- ========== CARD STYLES ========== -->
+  <Style Selector="Border.card">
+    <Setter Property="Background" Value="{DynamicResource CardBackgroundBrush}"/>
+    <Setter Property="CornerRadius" Value="12"/>
+    <Setter Property="Padding" Value="16"/>
+    <Setter Property="BorderBrush" Value="{DynamicResource CardBorderBrush}"/>
+    <Setter Property="BorderThickness" Value="1"/>
+  </Style>
+
+  <Style Selector="Border.card-elevated">
+    <Setter Property="Background" Value="{DynamicResource CardBackgroundBrush}"/>
+    <Setter Property="CornerRadius" Value="12"/>
+    <Setter Property="Padding" Value="20"/>
+    <Setter Property="BorderBrush" Value="{DynamicResource CardBorderBrush}"/>
+    <Setter Property="BorderThickness" Value="1"/>
+    <Setter Property="BoxShadow" Value="0 2 8 0 #1a000000"/>
+  </Style>
+
+  <!-- ========== TAB STYLING ========== -->
+  <Style Selector="TabItem">
+    <Setter Property="FontSize" Value="14"/>
+    <Setter Property="Padding" Value="20,12"/>
+    <Setter Property="Margin" Value="0,0,4,0"/>
+  </Style>
+
+  <Style Selector="TabControl">
+    <Setter Property="Background" Value="Transparent"/>
+  </Style>
+
+  <!-- ========== BADGE STYLES ========== -->
+  <Style Selector="Border.badge-5g">
+    <Setter Property="Background" Value="#e8f5e9"/>
+    <Setter Property="CornerRadius" Value="4"/>
+    <Setter Property="Padding" Value="8,4"/>
+  </Style>
+
+  <Style Selector="Border.badge-lte">
+    <Setter Property="Background" Value="#e3f2fd"/>
+    <Setter Property="CornerRadius" Value="4"/>
+    <Setter Property="Padding" Value="8,4"/>
+  </Style>
+
+  <Style Selector="Border.badge-umts">
+    <Setter Property="Background" Value="#fff3e0"/>
+    <Setter Property="CornerRadius" Value="4"/>
+    <Setter Property="Padding" Value="8,4"/>
+  </Style>
+
+  <Style Selector="Border.badge-gsm">
+    <Setter Property="Background" Value="#fce4ec"/>
+    <Setter Property="CornerRadius" Value="4"/>
+    <Setter Property="Padding" Value="8,4"/>
+  </Style>
+
+  <!-- ========== LISTBOX ITEMS ========== -->
+  <Style Selector="ListBoxItem">
+    <Setter Property="Padding" Value="4"/>
+    <Setter Property="Margin" Value="0,2"/>
+    <Setter Property="CornerRadius" Value="8"/>
+  </Style>
+
+  <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource SubtleBackgroundBrush}"/>
+  </Style>
+
+  <Style Selector="ListBoxItem:selected /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource AccentBrush}"/>
+  </Style>
+
+  <!-- ========== CHECKBOX STYLING ========== -->
+  <Style Selector="CheckBox">
+    <Setter Property="Padding" Value="8,4"/>
+  </Style>
+
+  <!-- ========== COMBOBOX STYLING ========== -->
+  <Style Selector="ComboBox">
+    <Setter Property="CornerRadius" Value="6"/>
+    <Setter Property="MinHeight" Value="36"/>
+  </Style>
+
+  <!-- ========== SCROLLBAR STYLING ========== -->
+  <Style Selector="ScrollViewer">
+    <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
+    <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+  </Style>
+
+  <!-- ========== COVERAGE PERCENTAGE STYLES ========== -->
+  <Style Selector="TextBlock.coverage-high">
+    <Setter Property="Foreground" Value="#2e7d32"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+  </Style>
+
+  <Style Selector="TextBlock.coverage-medium">
+    <Setter Property="Foreground" Value="#f57c00"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+  </Style>
+
+  <Style Selector="TextBlock.coverage-low">
+    <Setter Property="Foreground" Value="#d32f2f"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+  </Style>
+
+  <!-- ========== SECTION HEADER ========== -->
+  <Style Selector="TextBlock.section-header">
+    <Setter Property="FontSize" Value="16"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="Margin" Value="0,0,0,12"/>
+  </Style>
+
+  <Style Selector="TextBlock.subsection-header">
+    <Setter Property="FontSize" Value="13"/>
+    <Setter Property="FontWeight" Value="SemiBold"/>
+    <Setter Property="Foreground" Value="{DynamicResource TextSecondaryBrush}"/>
+    <Setter Property="Margin" Value="0,0,0,8"/>
+  </Style>
+
+  <!-- ========== STATUS INDICATORS ========== -->
+  <Style Selector="Border.status-success">
+    <Setter Property="Background" Value="#c8e6c9"/>
+    <Setter Property="CornerRadius" Value="8"/>
+    <Setter Property="Padding" Value="16"/>
+  </Style>
+
+  <Style Selector="Border.status-warning">
+    <Setter Property="Background" Value="#fff3e0"/>
+    <Setter Property="CornerRadius" Value="8"/>
+    <Setter Property="Padding" Value="16"/>
+  </Style>
+
+  <Style Selector="Border.status-error">
+    <Setter Property="Background" Value="#ffebee"/>
+    <Setter Property="CornerRadius" Value="8"/>
+    <Setter Property="Padding" Value="16"/>
+  </Style>
+
+  <!-- ========== THEME TOGGLE BUTTON ========== -->
+  <Style Selector="Button.theme-toggle">
+    <Setter Property="Background" Value="#ffffff25"/>
+    <Setter Property="Foreground" Value="White"/>
+    <Setter Property="BorderThickness" Value="1"/>
+    <Setter Property="BorderBrush" Value="#ffffff40"/>
+    <Setter Property="CornerRadius" Value="8"/>
+    <Setter Property="Padding" Value="14,8"/>
+  </Style>
+
+  <Style Selector="Button.theme-toggle:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="#ffffff40"/>
+  </Style>
+
+  <Style Selector="Button.theme-toggle:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="#ffffff50"/>
+  </Style>
+
+</Styles>

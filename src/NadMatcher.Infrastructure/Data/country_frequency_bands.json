@@ -1,0 +1,1599 @@
+{
+  "metadata": {
+    "version": "4.0",
+    "last_updated": "2026-01-26",
+    "source": "FrequencyCheck.com - Verified data extraction",
+    "notes": "Each country verified from FrequencyCheck.com. Data corrected based on actual website information.",
+    "total_countries": 137
+  },
+  "band_definitions": {
+    "GSM": {
+      "GSM-850": {"frequency_mhz": 850, "uplink": "824-849", "downlink": "869-894"},
+      "GSM-900": {"frequency_mhz": 900, "uplink": "880-915", "downlink": "925-960"},
+      "GSM-1800": {"frequency_mhz": 1800, "uplink": "1710-1785", "downlink": "1805-1880"},
+      "GSM-1900": {"frequency_mhz": 1900, "uplink": "1850-1910", "downlink": "1930-1990"}
+    },
+    "UMTS": {
+      "B1": {"frequency_mhz": 2100},
+      "B2": {"frequency_mhz": 1900},
+      "B3": {"frequency_mhz": 1800},
+      "B4": {"frequency_mhz": 1700},
+      "B5": {"frequency_mhz": 850},
+      "B6": {"frequency_mhz": 800},
+      "B8": {"frequency_mhz": 900},
+      "B9": {"frequency_mhz": 1700},
+      "B11": {"frequency_mhz": 1500},
+      "B19": {"frequency_mhz": 800}
+    },
+    "LTE": {
+      "B1": {"frequency_mhz": 2100},
+      "B2": {"frequency_mhz": 1900},
+      "B3": {"frequency_mhz": 1800},
+      "B4": {"frequency_mhz": 1700},
+      "B5": {"frequency_mhz": 850},
+      "B7": {"frequency_mhz": 2600},
+      "B8": {"frequency_mhz": 900},
+      "B11": {"frequency_mhz": 1500},
+      "B12": {"frequency_mhz": 700},
+      "B13": {"frequency_mhz": 700},
+      "B14": {"frequency_mhz": 700},
+      "B17": {"frequency_mhz": 700},
+      "B18": {"frequency_mhz": 800},
+      "B19": {"frequency_mhz": 800},
+      "B20": {"frequency_mhz": 800},
+      "B21": {"frequency_mhz": 1500},
+      "B25": {"frequency_mhz": 1900},
+      "B26": {"frequency_mhz": 850},
+      "B28": {"frequency_mhz": 700},
+      "B29": {"frequency_mhz": 700},
+      "B30": {"frequency_mhz": 2300},
+      "B32": {"frequency_mhz": 1500},
+      "B34": {"frequency_mhz": 2000},
+      "B38": {"frequency_mhz": 2600},
+      "B39": {"frequency_mhz": 1900},
+      "B40": {"frequency_mhz": 2300},
+      "B41": {"frequency_mhz": 2500},
+      "B42": {"frequency_mhz": 3500},
+      "B46": {"frequency_mhz": 5900},
+      "B48": {"frequency_mhz": 3600},
+      "B66": {"frequency_mhz": 1700},
+      "B71": {"frequency_mhz": 600}
+    },
+    "5G_NR": {
+      "n1": {"frequency_mhz": 2100},
+      "n3": {"frequency_mhz": 1800},
+      "n5": {"frequency_mhz": 850},
+      "n7": {"frequency_mhz": 2600},
+      "n8": {"frequency_mhz": 900},
+      "n18": {"frequency_mhz": 800},
+      "n20": {"frequency_mhz": 800},
+      "n26": {"frequency_mhz": 850},
+      "n28": {"frequency_mhz": 700},
+      "n29": {"frequency_mhz": 700},
+      "n38": {"frequency_mhz": 2600},
+      "n40": {"frequency_mhz": 2300},
+      "n41": {"frequency_mhz": 2500},
+      "n66": {"frequency_mhz": 1700},
+      "n70": {"frequency_mhz": 1700},
+      "n71": {"frequency_mhz": 600},
+      "n75": {"frequency_mhz": 1500},
+      "n77": {"frequency_mhz": 3700},
+      "n78": {"frequency_mhz": 3500},
+      "n79": {"frequency_mhz": 4700},
+      "n80": {"frequency_mhz": 1800},
+      "n257": {"frequency_mhz": 28000},
+      "n258": {"frequency_mhz": 26000},
+      "n260": {"frequency_mhz": 39000},
+      "n261": {"frequency_mhz": 28000}
+    }
+  },
+  "countries": [
+    {
+      "name": "Afghanistan",
+      "iso_code": "AF",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B2", "frequency_mhz": 1900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Albania",
+      "iso_code": "AL",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Algeria",
+      "iso_code": "DZ",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B2", "frequency_mhz": 1900}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B40", "frequency_mhz": 2300}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Andorra",
+      "iso_code": "AD",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": [{"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Angola",
+      "iso_code": "AO",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Argentina",
+      "iso_code": "AR",
+      "region": "south_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B26", "frequency_mhz": 850}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": [{"band": "n7", "frequency_mhz": 2600}, {"band": "n40", "frequency_mhz": 2300}, {"band": "n77", "frequency_mhz": 3700}]
+      }
+    },
+    {
+      "name": "Armenia",
+      "iso_code": "AM",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Australia",
+      "iso_code": "AU",
+      "region": "oceania",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B5", "frequency_mhz": 850}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B26", "frequency_mhz": 850}, {"band": "B28", "frequency_mhz": 700}, {"band": "B40", "frequency_mhz": 2300}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n5", "frequency_mhz": 850}, {"band": "n7", "frequency_mhz": 2600}, {"band": "n8", "frequency_mhz": 900}, {"band": "n26", "frequency_mhz": 850}, {"band": "n28", "frequency_mhz": 700}, {"band": "n40", "frequency_mhz": 2300}, {"band": "n78", "frequency_mhz": 3500}, {"band": "n258", "frequency_mhz": 26000}]
+      }
+    },
+    {
+      "name": "Austria",
+      "iso_code": "AT",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n28", "frequency_mhz": 700}, {"band": "n75", "frequency_mhz": 1500}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Azerbaijan",
+      "iso_code": "AZ",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Bahrain",
+      "iso_code": "BH",
+      "region": "middle_east",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B20", "frequency_mhz": 800}, {"band": "B41", "frequency_mhz": 2500}],
+        "5G_NR": [{"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Bangladesh",
+      "iso_code": "BD",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B8", "frequency_mhz": 900}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Belarus",
+      "iso_code": "BY",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Belgium",
+      "iso_code": "BE",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Bosnia and Herzegovina",
+      "iso_code": "BA",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Brazil",
+      "iso_code": "BR",
+      "region": "south_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B5", "frequency_mhz": 850}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B28", "frequency_mhz": 700}, {"band": "B40", "frequency_mhz": 2300}],
+        "5G_NR": [{"band": "n3", "frequency_mhz": 1800}, {"band": "n7", "frequency_mhz": 2600}, {"band": "n28", "frequency_mhz": 700}, {"band": "n40", "frequency_mhz": 2300}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Bulgaria",
+      "iso_code": "BG",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Canada",
+      "iso_code": "CA",
+      "region": "north_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B5", "frequency_mhz": 850}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B12", "frequency_mhz": 700}, {"band": "B13", "frequency_mhz": 700}, {"band": "B17", "frequency_mhz": 700}, {"band": "B25", "frequency_mhz": 1900}, {"band": "B26", "frequency_mhz": 850}, {"band": "B29", "frequency_mhz": 700}, {"band": "B38", "frequency_mhz": 2600}, {"band": "B46", "frequency_mhz": 5900}, {"band": "B66", "frequency_mhz": 1700}, {"band": "B71", "frequency_mhz": 600}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n41", "frequency_mhz": 2500}, {"band": "n66", "frequency_mhz": 1700}, {"band": "n71", "frequency_mhz": 600}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Chile",
+      "iso_code": "CL",
+      "region": "south_america",
+      "bands": {
+        "GSM": [],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B5", "frequency_mhz": 850}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B28", "frequency_mhz": 700}, {"band": "B38", "frequency_mhz": 2600}, {"band": "B66", "frequency_mhz": 1700}],
+        "5G_NR": [{"band": "n7", "frequency_mhz": 2600}, {"band": "n28", "frequency_mhz": 700}, {"band": "n66", "frequency_mhz": 1700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "China",
+      "iso_code": "CN",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}, {"band": "B34", "frequency_mhz": 2000}, {"band": "B39", "frequency_mhz": 1900}, {"band": "B40", "frequency_mhz": 2300}, {"band": "B41", "frequency_mhz": 2500}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n5", "frequency_mhz": 850}, {"band": "n8", "frequency_mhz": 900}, {"band": "n28", "frequency_mhz": 700}, {"band": "n41", "frequency_mhz": 2500}, {"band": "n78", "frequency_mhz": 3500}, {"band": "n79", "frequency_mhz": 4700}]
+      }
+    },
+    {
+      "name": "Colombia",
+      "iso_code": "CO",
+      "region": "south_america",
+      "bands": {
+        "GSM": [],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B5", "frequency_mhz": 850}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": [{"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Costa Rica",
+      "iso_code": "CR",
+      "region": "central_america",
+      "bands": {
+        "GSM": [{"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Croatia",
+      "iso_code": "HR",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n28", "frequency_mhz": 700}, {"band": "n77", "frequency_mhz": 3700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Cuba",
+      "iso_code": "CU",
+      "region": "caribbean",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Cyprus",
+      "iso_code": "CY",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Czech Republic",
+      "iso_code": "CZ",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n3", "frequency_mhz": 1800}, {"band": "n28", "frequency_mhz": 700}, {"band": "n77", "frequency_mhz": 3700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Denmark",
+      "iso_code": "DK",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Egypt",
+      "iso_code": "EG",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n3", "frequency_mhz": 1800}, {"band": "n8", "frequency_mhz": 900}]
+      }
+    },
+    {
+      "name": "Estonia",
+      "iso_code": "EE",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Finland",
+      "iso_code": "FI",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "France",
+      "iso_code": "FR",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Germany",
+      "iso_code": "DE",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}, {"band": "B32", "frequency_mhz": 1500}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n3", "frequency_mhz": 1800}, {"band": "n28", "frequency_mhz": 700}, {"band": "n77", "frequency_mhz": 3700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Ghana",
+      "iso_code": "GH",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Greece",
+      "iso_code": "GR",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Hong Kong",
+      "iso_code": "HK",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B40", "frequency_mhz": 2300}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n78", "frequency_mhz": 3500}, {"band": "n79", "frequency_mhz": 4700}]
+      }
+    },
+    {
+      "name": "Hungary",
+      "iso_code": "HU",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}, {"band": "B42", "frequency_mhz": 3500}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Iceland",
+      "iso_code": "IS",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "India",
+      "iso_code": "IN",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}, {"band": "B28", "frequency_mhz": 700}, {"band": "B40", "frequency_mhz": 2300}, {"band": "B41", "frequency_mhz": 2500}],
+        "5G_NR": [{"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}, {"band": "n258", "frequency_mhz": 26000}]
+      }
+    },
+    {
+      "name": "Indonesia",
+      "iso_code": "ID",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}, {"band": "B40", "frequency_mhz": 2300}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n3", "frequency_mhz": 1800}, {"band": "n40", "frequency_mhz": 2300}]
+      }
+    },
+    {
+      "name": "Ireland",
+      "iso_code": "IE",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": [{"band": "n3", "frequency_mhz": 1800}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Israel",
+      "iso_code": "IL",
+      "region": "middle_east",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B5", "frequency_mhz": 850}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B28", "frequency_mhz": 700}, {"band": "B32", "frequency_mhz": 1500}],
+        "5G_NR": [{"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Italy",
+      "iso_code": "IT",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}, {"band": "B32", "frequency_mhz": 1500}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": [{"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}, {"band": "n258", "frequency_mhz": 26000}]
+      }
+    },
+    {
+      "name": "Japan",
+      "iso_code": "JP",
+      "region": "asia",
+      "bands": {
+        "GSM": [],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}, {"band": "B9", "frequency_mhz": 1700}, {"band": "B11", "frequency_mhz": 1500}, {"band": "B19", "frequency_mhz": 800}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B8", "frequency_mhz": 900}, {"band": "B11", "frequency_mhz": 1500}, {"band": "B18", "frequency_mhz": 800}, {"band": "B19", "frequency_mhz": 800}, {"band": "B21", "frequency_mhz": 1500}, {"band": "B26", "frequency_mhz": 850}, {"band": "B28", "frequency_mhz": 700}, {"band": "B41", "frequency_mhz": 2500}, {"band": "B42", "frequency_mhz": 3500}],
+        "5G_NR": [{"band": "n3", "frequency_mhz": 1800}, {"band": "n18", "frequency_mhz": 800}, {"band": "n28", "frequency_mhz": 700}, {"band": "n77", "frequency_mhz": 3700}, {"band": "n78", "frequency_mhz": 3500}, {"band": "n79", "frequency_mhz": 4700}, {"band": "n257", "frequency_mhz": 28000}]
+      }
+    },
+    {
+      "name": "Jordan",
+      "iso_code": "JO",
+      "region": "middle_east",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": [{"band": "n77", "frequency_mhz": 3700}]
+      }
+    },
+    {
+      "name": "Kenya",
+      "iso_code": "KE",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": [{"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Kuwait",
+      "iso_code": "KW",
+      "region": "middle_east",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Latvia",
+      "iso_code": "LV",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": [{"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Lithuania",
+      "iso_code": "LT",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}, {"band": "B38", "frequency_mhz": 2600}, {"band": "B40", "frequency_mhz": 2300}, {"band": "B41", "frequency_mhz": 2500}],
+        "5G_NR": [{"band": "n28", "frequency_mhz": 700}, {"band": "n38", "frequency_mhz": 2600}, {"band": "n40", "frequency_mhz": 2300}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Luxembourg",
+      "iso_code": "LU",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Malaysia",
+      "iso_code": "MY",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": [{"band": "n26", "frequency_mhz": 850}, {"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}, {"band": "n257", "frequency_mhz": 28000}]
+      }
+    },
+    {
+      "name": "Malta",
+      "iso_code": "MT",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": [{"band": "n78", "frequency_mhz": 3500}, {"band": "n258", "frequency_mhz": 26000}]
+      }
+    },
+    {
+      "name": "Mexico",
+      "iso_code": "MX",
+      "region": "north_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B28", "frequency_mhz": 700}, {"band": "B38", "frequency_mhz": 2600}, {"band": "B66", "frequency_mhz": 1700}],
+        "5G_NR": [{"band": "n5", "frequency_mhz": 850}, {"band": "n28", "frequency_mhz": 700}, {"band": "n38", "frequency_mhz": 2600}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Morocco",
+      "iso_code": "MA",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Netherlands",
+      "iso_code": "NL",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n3", "frequency_mhz": 1800}, {"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "New Zealand",
+      "iso_code": "NZ",
+      "region": "oceania",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B28", "frequency_mhz": 700}, {"band": "B40", "frequency_mhz": 2300}],
+        "5G_NR": [{"band": "n40", "frequency_mhz": 2300}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Nigeria",
+      "iso_code": "NG",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": [{"band": "n38", "frequency_mhz": 2600}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Norway",
+      "iso_code": "NO",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Pakistan",
+      "iso_code": "PK",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B5", "frequency_mhz": 850}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Peru",
+      "iso_code": "PE",
+      "region": "south_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B28", "frequency_mhz": 700}, {"band": "B38", "frequency_mhz": 2600}, {"band": "B40", "frequency_mhz": 2300}, {"band": "B66", "frequency_mhz": 1700}],
+        "5G_NR": [{"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Philippines",
+      "iso_code": "PH",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B5", "frequency_mhz": 850}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B28", "frequency_mhz": 700}, {"band": "B34", "frequency_mhz": 2000}, {"band": "B40", "frequency_mhz": 2300}, {"band": "B41", "frequency_mhz": 2500}],
+        "5G_NR": [{"band": "n28", "frequency_mhz": 700}, {"band": "n41", "frequency_mhz": 2500}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Poland",
+      "iso_code": "PL",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n38", "frequency_mhz": 2600}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Portugal",
+      "iso_code": "PT",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": [{"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Qatar",
+      "iso_code": "QA",
+      "region": "middle_east",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Romania",
+      "iso_code": "RO",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n3", "frequency_mhz": 1800}, {"band": "n7", "frequency_mhz": 2600}, {"band": "n20", "frequency_mhz": 800}, {"band": "n77", "frequency_mhz": 3700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Russia",
+      "iso_code": "RU",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B34", "frequency_mhz": 2000}, {"band": "B38", "frequency_mhz": 2600}, {"band": "B40", "frequency_mhz": 2300}, {"band": "B41", "frequency_mhz": 2500}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n7", "frequency_mhz": 2600}, {"band": "n78", "frequency_mhz": 3500}, {"band": "n79", "frequency_mhz": 4700}, {"band": "n257", "frequency_mhz": 28000}, {"band": "n258", "frequency_mhz": 26000}]
+      }
+    },
+    {
+      "name": "Saudi Arabia",
+      "iso_code": "SA",
+      "region": "middle_east",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B38", "frequency_mhz": 2600}, {"band": "B40", "frequency_mhz": 2300}, {"band": "B41", "frequency_mhz": 2500}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n3", "frequency_mhz": 1800}, {"band": "n8", "frequency_mhz": 900}, {"band": "n20", "frequency_mhz": 800}, {"band": "n28", "frequency_mhz": 700}, {"band": "n40", "frequency_mhz": 2300}, {"band": "n41", "frequency_mhz": 2500}, {"band": "n77", "frequency_mhz": 3700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Serbia",
+      "iso_code": "RS",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Singapore",
+      "iso_code": "SG",
+      "region": "asia",
+      "bands": {
+        "GSM": [],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B38", "frequency_mhz": 2600}, {"band": "B40", "frequency_mhz": 2300}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n3", "frequency_mhz": 1800}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Slovakia",
+      "iso_code": "SK",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Slovenia",
+      "iso_code": "SI",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": [{"band": "n41", "frequency_mhz": 2500}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "South Africa",
+      "iso_code": "ZA",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B38", "frequency_mhz": 2600}, {"band": "B40", "frequency_mhz": 2300}],
+        "5G_NR": [{"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "South Korea",
+      "iso_code": "KR",
+      "region": "asia",
+      "bands": {
+        "GSM": [],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B5", "frequency_mhz": 850}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}],
+        "5G_NR": [{"band": "n78", "frequency_mhz": 3500}, {"band": "n257", "frequency_mhz": 28000}]
+      }
+    },
+    {
+      "name": "Spain",
+      "iso_code": "ES",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n3", "frequency_mhz": 1800}, {"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}, {"band": "n258", "frequency_mhz": 26000}]
+      }
+    },
+    {
+      "name": "Sweden",
+      "iso_code": "SE",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n28", "frequency_mhz": 700}, {"band": "n38", "frequency_mhz": 2600}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Switzerland",
+      "iso_code": "CH",
+      "region": "europe",
+      "bands": {
+        "GSM": [],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n28", "frequency_mhz": 700}, {"band": "n78", "frequency_mhz": 3500}, {"band": "n80", "frequency_mhz": 1800}]
+      }
+    },
+    {
+      "name": "Taiwan",
+      "iso_code": "TW",
+      "region": "asia",
+      "bands": {
+        "GSM": [],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Tanzania",
+      "iso_code": "TZ",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Thailand",
+      "iso_code": "TH",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B8", "frequency_mhz": 900}, {"band": "B40", "frequency_mhz": 2300}, {"band": "B41", "frequency_mhz": 2500}],
+        "5G_NR": [{"band": "n41", "frequency_mhz": 2500}]
+      }
+    },
+    {
+      "name": "Turkey",
+      "iso_code": "TR",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "UAE",
+      "iso_code": "AE",
+      "region": "middle_east",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": [{"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Uganda",
+      "iso_code": "UG",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Ukraine",
+      "iso_code": "UA",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B38", "frequency_mhz": 2600}, {"band": "B40", "frequency_mhz": 2300}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "United Kingdom",
+      "iso_code": "GB",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}, {"band": "B28", "frequency_mhz": 700}, {"band": "B32", "frequency_mhz": 1500}, {"band": "B38", "frequency_mhz": 2600}],
+        "5G_NR": [{"band": "n1", "frequency_mhz": 2100}, {"band": "n3", "frequency_mhz": 1800}, {"band": "n7", "frequency_mhz": 2600}, {"band": "n8", "frequency_mhz": 900}, {"band": "n28", "frequency_mhz": 700}, {"band": "n77", "frequency_mhz": 3700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "United States",
+      "iso_code": "US",
+      "region": "north_america",
+      "bands": {
+        "GSM": [{"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B5", "frequency_mhz": 850}, {"band": "B12", "frequency_mhz": 700}, {"band": "B13", "frequency_mhz": 700}, {"band": "B14", "frequency_mhz": 700}, {"band": "B17", "frequency_mhz": 700}, {"band": "B25", "frequency_mhz": 1900}, {"band": "B26", "frequency_mhz": 850}, {"band": "B29", "frequency_mhz": 700}, {"band": "B30", "frequency_mhz": 2300}, {"band": "B41", "frequency_mhz": 2500}, {"band": "B46", "frequency_mhz": 5900}, {"band": "B48", "frequency_mhz": 3600}, {"band": "B66", "frequency_mhz": 1700}, {"band": "B71", "frequency_mhz": 600}],
+        "5G_NR": [{"band": "n2", "frequency_mhz": 1900}, {"band": "n5", "frequency_mhz": 850}, {"band": "n29", "frequency_mhz": 700}, {"band": "n41", "frequency_mhz": 2500}, {"band": "n66", "frequency_mhz": 1700}, {"band": "n70", "frequency_mhz": 1700}, {"band": "n71", "frequency_mhz": 600}, {"band": "n77", "frequency_mhz": 3700}, {"band": "n258", "frequency_mhz": 26000}, {"band": "n260", "frequency_mhz": 39000}, {"band": "n261", "frequency_mhz": 28000}]
+      }
+    },
+    {
+      "name": "Vietnam",
+      "iso_code": "VN",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B2", "frequency_mhz": 1900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Zambia",
+      "iso_code": "ZM",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Zimbabwe",
+      "iso_code": "ZW",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Bolivia",
+      "iso_code": "BO",
+      "region": "south_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B12", "frequency_mhz": 700}, {"band": "B13", "frequency_mhz": 700}, {"band": "B17", "frequency_mhz": 700}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Botswana",
+      "iso_code": "BW",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Burkina Faso",
+      "iso_code": "BF",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Cambodia",
+      "iso_code": "KH",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B5", "frequency_mhz": 850}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Cameroon",
+      "iso_code": "CM",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Dominican Republic",
+      "iso_code": "DO",
+      "region": "caribbean",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1800", "frequency_mhz": 1800}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B4", "frequency_mhz": 1700}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Ecuador",
+      "iso_code": "EC",
+      "region": "south_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "El Salvador",
+      "iso_code": "SV",
+      "region": "central_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Ethiopia",
+      "iso_code": "ET",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Georgia",
+      "iso_code": "GE",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Guatemala",
+      "iso_code": "GT",
+      "region": "central_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": [{"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Honduras",
+      "iso_code": "HN",
+      "region": "central_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B4", "frequency_mhz": 1700}, {"band": "B5", "frequency_mhz": 850}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Iran",
+      "iso_code": "IR",
+      "region": "middle_east",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B42", "frequency_mhz": 3500}],
+        "5G_NR": [{"band": "n77", "frequency_mhz": 3700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Iraq",
+      "iso_code": "IQ",
+      "region": "middle_east",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Jamaica",
+      "iso_code": "JM",
+      "region": "caribbean",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B2", "frequency_mhz": 1900}],
+        "LTE": [{"band": "B5", "frequency_mhz": 850}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Kazakhstan",
+      "iso_code": "KZ",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": [{"band": "n77", "frequency_mhz": 3700}, {"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Kyrgyzstan",
+      "iso_code": "KG",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}, {"band": "B40", "frequency_mhz": 2300}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Laos",
+      "iso_code": "LA",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Lebanon",
+      "iso_code": "LB",
+      "region": "middle_east",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Libya",
+      "iso_code": "LY",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Macao",
+      "iso_code": "MO",
+      "region": "asia",
+      "bands": {
+        "GSM": [],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B8", "frequency_mhz": 900}, {"band": "B40", "frequency_mhz": 2300}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Madagascar",
+      "iso_code": "MG",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Maldives",
+      "iso_code": "MV",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": [{"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Moldova",
+      "iso_code": "MD",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Mongolia",
+      "iso_code": "MN",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Montenegro",
+      "iso_code": "ME",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Mozambique",
+      "iso_code": "MZ",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Myanmar",
+      "iso_code": "MM",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B8", "frequency_mhz": 900}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Namibia",
+      "iso_code": "NA",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Nepal",
+      "iso_code": "NP",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B8", "frequency_mhz": 900}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Nicaragua",
+      "iso_code": "NI",
+      "region": "central_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B4", "frequency_mhz": 1700}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Panama",
+      "iso_code": "PA",
+      "region": "central_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1800", "frequency_mhz": 1800}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Paraguay",
+      "iso_code": "PY",
+      "region": "south_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Senegal",
+      "iso_code": "SN",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Sri Lanka",
+      "iso_code": "LK",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B5", "frequency_mhz": 850}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B8", "frequency_mhz": 900}, {"band": "B40", "frequency_mhz": 2300}, {"band": "B41", "frequency_mhz": 2500}],
+        "5G_NR": [{"band": "n78", "frequency_mhz": 3500}]
+      }
+    },
+    {
+      "name": "Syria",
+      "iso_code": "SY",
+      "region": "middle_east",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Tajikistan",
+      "iso_code": "TJ",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B3", "frequency_mhz": 1800}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Tunisia",
+      "iso_code": "TN",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Turkmenistan",
+      "iso_code": "TM",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B7", "frequency_mhz": 2600}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Uruguay",
+      "iso_code": "UY",
+      "region": "south_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1800", "frequency_mhz": 1800}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Uzbekistan",
+      "iso_code": "UZ",
+      "region": "asia",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B7", "frequency_mhz": 2600}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Venezuela",
+      "iso_code": "VE",
+      "region": "south_america",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}, {"band": "B8", "frequency_mhz": 900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B4", "frequency_mhz": 1700}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Yemen",
+      "iso_code": "YE",
+      "region": "middle_east",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "New Caledonia",
+      "iso_code": "NC",
+      "region": "oceania",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Liechtenstein",
+      "iso_code": "LI",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Eswatini",
+      "iso_code": "SZ",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "North Macedonia",
+      "iso_code": "MK",
+      "region": "europe",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}, {"band": "GSM-1800", "frequency_mhz": 1800}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}, {"band": "B2", "frequency_mhz": 1900}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}, {"band": "B20", "frequency_mhz": 800}],
+        "5G_NR": []
+      }
+    },
+    {
+      "name": "Puerto Rico",
+      "iso_code": "PR",
+      "region": "caribbean",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}, {"band": "GSM-1900", "frequency_mhz": 1900}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B4", "frequency_mhz": 1700}, {"band": "B13", "frequency_mhz": 700}, {"band": "B17", "frequency_mhz": 700}, {"band": "B25", "frequency_mhz": 1900}, {"band": "B66", "frequency_mhz": 1700}, {"band": "B71", "frequency_mhz": 600}],
+        "5G_NR": [{"band": "n41", "frequency_mhz": 2500}, {"band": "n66", "frequency_mhz": 1700}, {"band": "n71", "frequency_mhz": 600}, {"band": "n78", "frequency_mhz": 3500}, {"band": "n258", "frequency_mhz": 26000}, {"band": "n260", "frequency_mhz": 39000}, {"band": "n261", "frequency_mhz": 28000}]
+      }
+    },
+    {
+      "name": "Trinidad and Tobago",
+      "iso_code": "TT",
+      "region": "caribbean",
+      "bands": {
+        "GSM": [{"band": "GSM-850", "frequency_mhz": 850}],
+        "UMTS": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B5", "frequency_mhz": 850}],
+        "LTE": [{"band": "B2", "frequency_mhz": 1900}, {"band": "B4", "frequency_mhz": 1700}, {"band": "B7", "frequency_mhz": 2600}, {"band": "B28", "frequency_mhz": 700}],
+        "5G_NR": [{"band": "n41", "frequency_mhz": 2500}]
+      }
+    },
+    {
+      "name": "Mauritius",
+      "iso_code": "MU",
+      "region": "africa",
+      "bands": {
+        "GSM": [{"band": "GSM-900", "frequency_mhz": 900}],
+        "UMTS": [{"band": "B1", "frequency_mhz": 2100}],
+        "LTE": [{"band": "B3", "frequency_mhz": 1800}],
+        "5G_NR": []
+      }
+    }
+  ]
+}

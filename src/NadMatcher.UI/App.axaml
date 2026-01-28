@@ -1,0 +1,58 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:NadMatcher.UI"
+             xmlns:converters="using:NadMatcher.UI.Converters"
+             x:Class="NadMatcher.UI.App"
+             RequestedThemeVariant="Light">
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="avares://AumovioNadSelectorVRG8/Styles/AppStyles.axaml"/>
+    </Application.Styles>
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <!-- Light Theme - White/Blue -->
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="AppBackgroundBrush" Color="#f5f7fa"/>
+                    <SolidColorBrush x:Key="CardBackgroundBrush" Color="#ffffff"/>
+                    <SolidColorBrush x:Key="CardSecondaryBackgroundBrush" Color="#f0f4f8"/>
+                    <SolidColorBrush x:Key="CardBorderBrush" Color="#e0e6ed"/>
+                    <SolidColorBrush x:Key="SubtleBackgroundBrush" Color="#f5f7fa"/>
+                    <SolidColorBrush x:Key="TextPrimaryBrush" Color="#1a1a2e"/>
+                    <SolidColorBrush x:Key="TextSecondaryBrush" Color="#5a6270"/>
+                    <SolidColorBrush x:Key="AccentBrush" Color="#1976d2"/>
+                    <SolidColorBrush x:Key="AccentLightBrush" Color="#e3f2fd"/>
+                </ResourceDictionary>
+                <!-- Dark Theme - Gray/Blue -->
+                <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="AppBackgroundBrush" Color="#1e1e2e"/>
+                    <SolidColorBrush x:Key="CardBackgroundBrush" Color="#2d2d3d"/>
+                    <SolidColorBrush x:Key="CardSecondaryBackgroundBrush" Color="#252535"/>
+                    <SolidColorBrush x:Key="CardBorderBrush" Color="#3d3d4d"/>
+                    <SolidColorBrush x:Key="SubtleBackgroundBrush" Color="#353545"/>
+                    <SolidColorBrush x:Key="TextPrimaryBrush" Color="#e8e8f0"/>
+                    <SolidColorBrush x:Key="TextSecondaryBrush" Color="#a0a0b0"/>
+                    <SolidColorBrush x:Key="AccentBrush" Color="#64b5f6"/>
+                    <SolidColorBrush x:Key="AccentLightBrush" Color="#1e3a5f"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <!-- Converters -->
+            <converters:PercentageToColorConverter x:Key="PercentageToColorConverter"/>
+            <converters:PercentageToBackgroundConverter x:Key="PercentageToBackgroundConverter"/>
+            <converters:BoolToBackgroundConverter x:Key="BoolToBackgroundConverter"/>
+            <converters:PerfectMatchBackgroundConverter x:Key="PerfectMatchBackgroundConverter"/>
+            <converters:ListToStringConverter x:Key="ListToStringConverter"/>
+            <converters:IsGreaterThanZeroConverter x:Key="IsGreaterThanZeroConverter"/>
+            <converters:BoolToExpandConverter x:Key="BoolToExpandConverter"/>
+            <converters:BoolToThemeIconConverter x:Key="BoolToThemeIconConverter"/>
+            <converters:BoolToThemeTextConverter x:Key="BoolToThemeTextConverter"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
