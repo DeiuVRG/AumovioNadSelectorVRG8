@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:NadMatcher.Maui.ViewModels"
+             xmlns:converters="clr-namespace:NadMatcher.Maui.Converters"
+             xmlns:domain="clr-namespace:NadMatcher.Domain.Entities;assembly=NadMatcher.Domain"
+             x:Class="NadMatcher.Maui.Views.CountrySelectionPage"
+             x:DataType="vm:CountrySelectionViewModel">
+
+    <ContentView.Resources>
+        <converters:PercentageToColorConverter x:Key="PercentageToColorConverter"/>
+        <converters:PercentageToBackgroundConverter x:Key="PercentageToBackgroundConverter"/>
+        <converters:BoolToBackgroundConverter x:Key="BoolToBackgroundConverter"/>
+        <converters:PerfectMatchBackgroundConverter x:Key="PerfectMatchBackgroundConverter"/>
+        <converters:IsGreaterThanZeroConverter x:Key="IsGreaterThanZeroConverter"/>
+        <converters:BoolToExpandConverter x:Key="BoolToExpandConverter"/>
+        <converters:ListToStringConverter x:Key="ListToStringConverter"/>
+    </ContentView.Resources>
+
+    <Grid RowDefinitions="Auto,*,Auto" BackgroundColor="#f5f7fa">
+        <!-- Header -->
+        <Border Grid.Row="0" Padding="20"
+                BackgroundColor="#f0f4f8">
+            <VerticalStackLayout Spacing="16">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="Country Selection" FontSize="22" FontAttributes="Bold"
+                           TextColor="#1a1a2e"/>
+                    <Border BackgroundColor="#1976d2" StrokeShape="RoundRectangle 12" Padding="12,4"
+                            VerticalOptions="Center">
+                        <Label Text="{Binding SelectedCount, StringFormat='{0} selected'}"
+                               FontSize="12" TextColor="White" FontAttributes="Bold"/>
+                    </Border>
+                </HorizontalStackLayout>
+
+                <Label Text="Select countries to find NAD modules that support all selected regions."
+                       TextColor="#5a6270"/>
+
+                <!-- Filters Row -->
+                <Grid ColumnDefinitions="Auto,220,*,Auto,Auto,Auto" ColumnSpacing="12">
+                    <Label Text="Region:" VerticalOptions="Center" FontAttributes="Bold"
+                           TextColor="#1a1a2e"/>
+                    <Border Grid.Column="1" BackgroundColor="#ffffff" StrokeShape="RoundRectangle 8" Stroke="#d0d7de" Padding="4,0">
+                        <Picker ItemsSource="{Binding Regions}"
+                                SelectedItem="{Binding SelectedRegion}"
+                                Title="All Regions"
+                                TextColor="#1a1a2e"
+                                TitleColor="#5a6270"
+                                BackgroundColor="Transparent"
+                                HeightRequest="40"/>
+                    </Border>
+
+                    <HorizontalStackLayout Grid.Column="3" Spacing="8">
+                        <Button Text="Select All" Command="{Binding SelectAllCommand}"
+                                BackgroundColor="#e0e0e0" TextColor="#333333"
+                                CornerRadius="8" Padding="16,8"/>
+                        <Button Text="Clear" Command="{Binding ClearSelectionCommand}"
+                                BackgroundColor="#e0e0e0" TextColor="#333333"
+                                CornerRadius="8" Padding="16,8"/>
+                    </HorizontalStackLayout>
+
+                    <Button Grid.Column="5" Text="Analyze" Command="{Binding AnalyzeCommand}"
+                            BackgroundColor="#1976d2" TextColor="White"
+                            CornerRadius="8" Padding="20,12" Margin="12,0,0,0"/>
+                </Grid>
+
+                <!-- Technology Filters -->
+                <Border BackgroundColor="#ffffff"
+                        StrokeShape="RoundRectangle 12" Padding="16"
+                        Stroke="#e0e6ed">
+                    <HorizontalStackLayout Spacing="20">
+                        <Label Text="Technologies:" VerticalOptions="Center" FontAttributes="Bold"
+                               TextColor="#5a6270"/>
+                        <HorizontalStackLayout Spacing="8">
+                            <CheckBox IsChecked="{Binding IncludeGsm}" VerticalOptions="Center"/>
+                            <Border BackgroundColor="#fce4ec" StrokeShape="RoundRectangle 6" Padding="10,6">
+                                <Label Text="GSM" FontSize="12" TextColor="#c2185b" FontAttributes="Bold"/>
+                            </Border>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="8">
+                            <CheckBox IsChecked="{Binding IncludeUmts}" VerticalOptions="Center"/>
+                            <Border BackgroundColor="#fff3e0" StrokeShape="RoundRectangle 6" Padding="10,6">
+                                <Label Text="UMTS" FontSize="12" TextColor="#e65100" FontAttributes="Bold"/>
+                            </Border>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="8">
+                            <CheckBox IsChecked="{Binding IncludeLte}" VerticalOptions="Center"/>
+                            <Border BackgroundColor="#e3f2fd" StrokeShape="RoundRectangle 6" Padding="10,6">
+                                <Label Text="LTE" FontSize="12" TextColor="#1565c0" FontAttributes="Bold"/>
+                            </Border>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="8">
+                            <CheckBox IsChecked="{Binding Include5G}" VerticalOptions="Center"/>
+                            <Border BackgroundColor="#e8f5e9" StrokeShape="RoundRectangle 6" Padding="10,6">
+                                <Label Text="5G NR" FontSize="12" TextColor="#2e7d32" FontAttributes="Bold"/>
+                            </Border>
+                        </HorizontalStackLayout>
+                    </HorizontalStackLayout>
+                </Border>
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Main content -->
+        <Grid Grid.Row="1" ColumnDefinitions="*,*" Margin="20,16" ColumnSpacing="20">
+            <!-- Country List -->
+            <Border Grid.Column="0" Padding="20"
+                    BackgroundColor="#ffffff"
+                    StrokeShape="RoundRectangle 12"
+                    Stroke="#e0e6ed">
+                <Grid RowDefinitions="Auto,*">
+                    <HorizontalStackLayout Spacing="8" Margin="0,0,0,16">
+                        <Label Text="Countries" FontSize="18" FontAttributes="Bold"
+                               TextColor="#1a1a2e"/>
+                        <Border BackgroundColor="#f5f7fa"
+                                StrokeShape="RoundRectangle 10" Padding="8,4">
+                            <Label Text="{Binding Countries.Count}" FontSize="12"
+                                   TextColor="#5a6270"/>
+                        </Border>
+                    </HorizontalStackLayout>
+
+                    <CollectionView Grid.Row="1" ItemsSource="{Binding Countries}" SelectionMode="None">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="vm:CountryItem">
+                                <Border Padding="12,8" Margin="0,3"
+                                        BackgroundColor="{Binding IsSelected, Converter={StaticResource BoolToBackgroundConverter}}"
+                                        StrokeShape="RoundRectangle 10">
+                                    <VerticalStackLayout>
+                                        <!-- Main row -->
+                                        <Grid ColumnDefinitions="Auto,*,Auto,Auto" ColumnSpacing="12">
+                                            <CheckBox IsChecked="{Binding IsSelected}" VerticalOptions="Center"/>
+                                            <VerticalStackLayout Grid.Column="1">
+                                                <Label Text="{Binding DisplayName}" FontAttributes="Bold" FontSize="14"
+                                                       TextColor="#1a1a2e"/>
+                                                <HorizontalStackLayout Spacing="6" Margin="0,4,0,0">
+                                                    <Label Text="{Binding Region}" FontSize="12"
+                                                           TextColor="#5a6270"/>
+                                                    <Border BackgroundColor="#e8f5e9" StrokeShape="RoundRectangle 4" Padding="6,2"
+                                                            IsVisible="{Binding Has5G}">
+                                                        <Label Text="5G" FontSize="10" TextColor="#2e7d32" FontAttributes="Bold"/>
+                                                    </Border>
+                                                    <Border BackgroundColor="#e3f2fd" StrokeShape="RoundRectangle 4" Padding="6,2"
+                                                            IsVisible="{Binding HasLte}">
+                                                        <Label Text="LTE" FontSize="10" TextColor="#1565c0" FontAttributes="Bold"/>
+                                                    </Border>
+                                                </HorizontalStackLayout>
+                                            </VerticalStackLayout>
+                                            <Border Grid.Column="2" BackgroundColor="#f5f7fa"
+                                                    StrokeShape="RoundRectangle 8" Padding="8,4" VerticalOptions="Center">
+                                                <Label Text="{Binding BandCount, StringFormat='{0} bands'}" FontSize="11"
+                                                       TextColor="#5a6270"/>
+                                            </Border>
+                                            <Button Grid.Column="3" Text="{Binding IsExpanded, Converter={StaticResource BoolToExpandConverter}}"
+                                                    Command="{Binding ToggleExpandCommand}" Padding="8,4" FontSize="11"
+                                                    BackgroundColor="Transparent" BorderWidth="0"/>
+                                        </Grid>
+
+                                        <!-- Expanded Details -->
+                                        <Border IsVisible="{Binding IsExpanded}"
+                                                BackgroundColor="#f5f7fa"
+                                                StrokeShape="RoundRectangle 8" Padding="16" Margin="32,12,0,4">
+                                            <VerticalStackLayout Spacing="10">
+                                                <Label Text="Frequency Bands" FontAttributes="Bold" FontSize="13"
+                                                       TextColor="#5a6270"/>
+
+                                                <Grid ColumnDefinitions="90,*" RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="8">
+                                                    <!-- GSM -->
+                                                    <Border Grid.Row="0" Grid.Column="0" BackgroundColor="#fce4ec"
+                                                            StrokeShape="RoundRectangle 6" Padding="8,4"
+                                                            IsVisible="{Binding HasGsm}">
+                                                        <Label Text="{Binding GsmCount, StringFormat='GSM ({0})'}" FontSize="11"
+                                                               TextColor="#c2185b" FontAttributes="Bold"/>
+                                                    </Border>
+                                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding GsmBands}" FontSize="12"
+                                                           TextColor="#5a6270"
+                                                           IsVisible="{Binding HasGsm}"/>
+
+                                                    <!-- UMTS -->
+                                                    <Border Grid.Row="1" Grid.Column="0" BackgroundColor="#fff3e0"
+                                                            StrokeShape="RoundRectangle 6" Padding="8,4"
+                                                            IsVisible="{Binding HasUmts}">
+                                                        <Label Text="{Binding UmtsCount, StringFormat='UMTS ({0})'}" FontSize="11"
+                                                               TextColor="#e65100" FontAttributes="Bold"/>
+                                                    </Border>
+                                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding UmtsBands}" FontSize="12"
+                                                           TextColor="#5a6270"
+                                                           IsVisible="{Binding HasUmts}"/>
+
+                                                    <!-- LTE -->
+                                                    <Border Grid.Row="2" Grid.Column="0" BackgroundColor="#e3f2fd"
+                                                            StrokeShape="RoundRectangle 6" Padding="8,4"
+                                                            IsVisible="{Binding HasLte}">
+                                                        <Label Text="{Binding LteCount, StringFormat='LTE ({0})'}" FontSize="11"
+                                                               TextColor="#1565c0" FontAttributes="Bold"/>
+                                                    </Border>
+                                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding LteBands}" FontSize="12"
+                                                           TextColor="#5a6270"
+                                                           IsVisible="{Binding HasLte}"/>
+
+                                                    <!-- 5G NR -->
+                                                    <Border Grid.Row="3" Grid.Column="0" BackgroundColor="#e8f5e9"
+                                                            StrokeShape="RoundRectangle 6" Padding="8,4"
+                                                            IsVisible="{Binding Has5G}">
+                                                        <Label Text="{Binding Nr5GCount, StringFormat='5G NR ({0})'}" FontSize="11"
+                                                               TextColor="#2e7d32" FontAttributes="Bold"/>
+                                                    </Border>
+                                                    <Label Grid.Row="3" Grid.Column="1" Text="{Binding Nr5GBands}" FontSize="12"
+                                                           TextColor="#5a6270"
+                                                           IsVisible="{Binding Has5G}"/>
+                                                </Grid>
+                                            </VerticalStackLayout>
+                                        </Border>
+                                    </VerticalStackLayout>
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+            </Border>
+
+            <!-- Results -->
+            <Border Grid.Column="1" Padding="20"
+                    BackgroundColor="#ffffff"
+                    StrokeShape="RoundRectangle 12"
+                    Stroke="#e0e6ed">
+                <ScrollView>
+                    <VerticalStackLayout Spacing="20">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="NAD Recommendations" FontSize="18" FontAttributes="Bold"
+                                   TextColor="#1a1a2e"/>
+                            <Border BackgroundColor="#f5f7fa"
+                                    StrokeShape="RoundRectangle 10" Padding="8,4"
+                                    IsVisible="{Binding Recommendations.Count, Converter={StaticResource IsGreaterThanZeroConverter}}">
+                                <Label Text="{Binding Recommendations.Count}" FontSize="12"
+                                       TextColor="#5a6270"/>
+                            </Border>
+                        </HorizontalStackLayout>
+
+                        <!-- Summary -->
+                        <Border BackgroundColor="{Binding HasPerfectMatch, Converter={StaticResource PerfectMatchBackgroundConverter}}"
+                                StrokeShape="RoundRectangle 12" Padding="20"
+                                IsVisible="{Binding Summary, Converter={StaticResource IsNotNullOrEmptyConverter}}">
+                            <Label Text="{Binding Summary}" FontAttributes="Bold" FontSize="14"
+                                   TextColor="#1a1a2e"/>
+                        </Border>
+
+                        <!-- Top Recommendations -->
+                        <VerticalStackLayout Spacing="12">
+                            <Label Text="Top NAD Modules" FontAttributes="Bold" FontSize="13"
+                                   TextColor="#5a6270"/>
+
+                            <CollectionView ItemsSource="{Binding Recommendations}">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate x:DataType="vm:NadRecommendationItem">
+                                        <Border BackgroundColor="#f0f4f8"
+                                                StrokeShape="RoundRectangle 12" Padding="16" Margin="0,6"
+                                                Stroke="#e0e6ed">
+                                            <VerticalStackLayout>
+                                                <!-- Main recommendation row -->
+                                                <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="16">
+                                                    <VerticalStackLayout Spacing="6">
+                                                        <Label Text="{Binding Nad.Name}" FontAttributes="Bold" FontSize="16"
+                                                               TextColor="#1a1a2e"/>
+                                                        <Label Text="{Binding RecommendationReason}" FontSize="12"
+                                                               FontAttributes="Italic"
+                                                               TextColor="#5a6270"/>
+                                                        <HorizontalStackLayout Spacing="12" Margin="0,6,0,0">
+                                                            <HorizontalStackLayout Spacing="4">
+                                                                <Ellipse WidthRequest="8" HeightRequest="8" Fill="#4caf50"/>
+                                                                <Label FontSize="12" TextColor="#4caf50"
+                                                                       Text="{Binding CoveredCountries.Count, StringFormat='Covered: {0}'}"/>
+                                                            </HorizontalStackLayout>
+                                                            <HorizontalStackLayout Spacing="4" IsVisible="{Binding HasMissingInfo}">
+                                                                <Ellipse WidthRequest="8" HeightRequest="8" Fill="#ff9800"/>
+                                                                <Label FontSize="12" TextColor="#ff9800"
+                                                                       Text="{Binding PartiallyCoveredCountries.Count, StringFormat='Partial: {0}'}"/>
+                                                            </HorizontalStackLayout>
+                                                        </HorizontalStackLayout>
+                                                    </VerticalStackLayout>
+
+                                                    <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"
+                                                                         WidthRequest="80">
+                                                        <Label Text="{Binding CoveragePercentage, StringFormat='{0:F0}%'}"
+                                                               FontSize="28" FontAttributes="Bold" HorizontalOptions="Center"
+                                                               TextColor="{Binding CoveragePercentage, Converter={StaticResource PercentageToColorConverter}}"/>
+                                                        <Label Text="Coverage" HorizontalOptions="Center" FontSize="11"
+                                                               TextColor="#5a6270"/>
+                                                    </VerticalStackLayout>
+
+                                                    <Button Grid.Column="2" Text="{Binding IsExpanded, Converter={StaticResource BoolToExpandConverter}}"
+                                                            Command="{Binding ToggleExpandCommand}" Padding="8,4" FontSize="11"
+                                                            BackgroundColor="Transparent" BorderWidth="0" VerticalOptions="Start"/>
+                                                </Grid>
+
+                                                <!-- Expanded NAD Details -->
+                                                <Border IsVisible="{Binding IsExpanded}"
+                                                        BackgroundColor="#f5f7fa"
+                                                        StrokeShape="RoundRectangle 10" Padding="16" Margin="0,16,0,0">
+                                                    <VerticalStackLayout Spacing="16">
+                                                        <!-- Basic Module Info -->
+                                                        <Label Text="Module Details" FontAttributes="Bold" FontSize="13" TextColor="#1976d2"/>
+                                                        <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto" RowSpacing="12" ColumnSpacing="12">
+                                                            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Spacing="4">
+                                                                <Label Text="Category" FontSize="11" TextColor="#5a6270"/>
+                                                                <Label Text="{Binding Category}" FontSize="13" FontAttributes="Bold" TextColor="#1a1a2e"/>
+                                                            </VerticalStackLayout>
+                                                            <VerticalStackLayout Grid.Row="0" Grid.Column="1" Spacing="4">
+                                                                <Label Text="Form Factor" FontSize="11" TextColor="#5a6270"/>
+                                                                <Label Text="{Binding FormFactor}" FontSize="13" FontAttributes="Bold" TextColor="#1a1a2e"/>
+                                                            </VerticalStackLayout>
+                                                            <VerticalStackLayout Grid.Row="0" Grid.Column="2" Spacing="4">
+                                                                <Label Text="Chipset" FontSize="11" TextColor="#5a6270"/>
+                                                                <Label Text="{Binding Chipset}" FontSize="13" FontAttributes="Bold" TextColor="#1a1a2e"/>
+                                                            </VerticalStackLayout>
+                                                            <VerticalStackLayout Grid.Row="1" Grid.Column="0" Spacing="4">
+                                                                <Label Text="Max Downlink" FontSize="11" TextColor="#5a6270"/>
+                                                                <Label Text="{Binding MaxDownlink, StringFormat='{0} Mbps'}" FontSize="13" FontAttributes="Bold" TextColor="#1a1a2e"/>
+                                                            </VerticalStackLayout>
+                                                            <VerticalStackLayout Grid.Row="1" Grid.Column="1" Spacing="4">
+                                                                <Label Text="Max Uplink" FontSize="11" TextColor="#5a6270"/>
+                                                                <Label Text="{Binding MaxUplink, StringFormat='{0} Mbps'}" FontSize="13" FontAttributes="Bold" TextColor="#1a1a2e"/>
+                                                            </VerticalStackLayout>
+                                                            <VerticalStackLayout Grid.Row="1" Grid.Column="2" Spacing="4">
+                                                                <Label Text="Target Region" FontSize="11" TextColor="#5a6270"/>
+                                                                <Label Text="{Binding TargetRegion}" FontSize="13" FontAttributes="Bold" TextColor="#1a1a2e"/>
+                                                            </VerticalStackLayout>
+                                                        </Grid>
+
+                                                        <!-- NAD Supported Bands Section -->
+                                                        <Border BackgroundColor="#e8f5e9" StrokeShape="RoundRectangle 8" Padding="12" Stroke="#c8e6c9">
+                                                            <VerticalStackLayout Spacing="10">
+                                                                <Label Text="Supported Frequency Bands by this NAD" FontAttributes="Bold" FontSize="12" TextColor="#2e7d32"/>
+
+                                                                <!-- LTE Bands -->
+                                                                <VerticalStackLayout Spacing="4" IsVisible="{Binding SupportsLte}">
+                                                                    <HorizontalStackLayout Spacing="8">
+                                                                        <Border BackgroundColor="#e3f2fd" StrokeShape="RoundRectangle 4" Padding="8,3">
+                                                                            <Label Text="LTE" FontSize="10" TextColor="#1565c0" FontAttributes="Bold"/>
+                                                                        </Border>
+                                                                        <Label Text="{Binding LteBands}" FontSize="11" TextColor="#1a1a2e" LineBreakMode="WordWrap"/>
+                                                                    </HorizontalStackLayout>
+                                                                </VerticalStackLayout>
+
+                                                                <!-- 5G Bands -->
+                                                                <VerticalStackLayout Spacing="4" IsVisible="{Binding Supports5G}">
+                                                                    <HorizontalStackLayout Spacing="8">
+                                                                        <Border BackgroundColor="#e8f5e9" StrokeShape="RoundRectangle 4" Padding="8,3">
+                                                                            <Label Text="5G NR" FontSize="10" TextColor="#2e7d32" FontAttributes="Bold"/>
+                                                                        </Border>
+                                                                        <Label Text="{Binding Nr5GBands}" FontSize="11" TextColor="#1a1a2e" LineBreakMode="WordWrap"/>
+                                                                    </HorizontalStackLayout>
+                                                                </VerticalStackLayout>
+
+                                                                <!-- UMTS Bands -->
+                                                                <VerticalStackLayout Spacing="4" IsVisible="{Binding SupportsUmts}">
+                                                                    <HorizontalStackLayout Spacing="8">
+                                                                        <Border BackgroundColor="#fff3e0" StrokeShape="RoundRectangle 4" Padding="8,3">
+                                                                            <Label Text="UMTS" FontSize="10" TextColor="#e65100" FontAttributes="Bold"/>
+                                                                        </Border>
+                                                                        <Label Text="{Binding UmtsBands}" FontSize="11" TextColor="#1a1a2e" LineBreakMode="WordWrap"/>
+                                                                    </HorizontalStackLayout>
+                                                                </VerticalStackLayout>
+
+                                                                <!-- GSM Bands -->
+                                                                <VerticalStackLayout Spacing="4" IsVisible="{Binding SupportsGsm}">
+                                                                    <HorizontalStackLayout Spacing="8">
+                                                                        <Border BackgroundColor="#fce4ec" StrokeShape="RoundRectangle 4" Padding="8,3">
+                                                                            <Label Text="GSM" FontSize="10" TextColor="#c2185b" FontAttributes="Bold"/>
+                                                                        </Border>
+                                                                        <Label Text="{Binding GsmBands}" FontSize="11" TextColor="#1a1a2e" LineBreakMode="WordWrap"/>
+                                                                    </HorizontalStackLayout>
+                                                                </VerticalStackLayout>
+                                                            </VerticalStackLayout>
+                                                        </Border>
+
+                                                        <!-- Missing Bands Per Country Section -->
+                                                        <Border BackgroundColor="#ffebee" StrokeShape="RoundRectangle 8" Padding="12" Stroke="#ffcdd2"
+                                                                IsVisible="{Binding HasCountryDetails}">
+                                                            <VerticalStackLayout Spacing="12">
+                                                                <Label Text="Missing Bands per Country (Why not 100%)" FontAttributes="Bold" FontSize="12" TextColor="#c62828"/>
+
+                                                                <BindableLayout.ItemsSource>
+                                                                    <x:Array Type="{x:Type vm:CountryMissingBandsInfo}">
+                                                                    </x:Array>
+                                                                </BindableLayout.ItemsSource>
+
+                                                                <!-- Country Missing Bands List -->
+                                                                <VerticalStackLayout BindableLayout.ItemsSource="{Binding CountryMissingBands}" Spacing="10">
+                                                                    <BindableLayout.ItemTemplate>
+                                                                        <DataTemplate x:DataType="vm:CountryMissingBandsInfo">
+                                                                            <Border BackgroundColor="#ffffff" StrokeShape="RoundRectangle 6" Padding="10" Stroke="#ffcdd2">
+                                                                                <VerticalStackLayout Spacing="6">
+                                                                                    <!-- Country Header -->
+                                                                                    <Grid ColumnDefinitions="*,Auto">
+                                                                                        <Label Text="{Binding CountryName}" FontAttributes="Bold" FontSize="12" TextColor="#1a1a2e"/>
+                                                                                        <Border Grid.Column="1" BackgroundColor="{Binding MatchPercentage, Converter={StaticResource PercentageToBackgroundConverter}}"
+                                                                                                StrokeShape="RoundRectangle 4" Padding="6,2">
+                                                                                            <Label Text="{Binding MatchPercentage, StringFormat='{0:F0}% match'}" FontSize="10"
+                                                                                                   TextColor="{Binding MatchPercentage, Converter={StaticResource PercentageToColorConverter}}" FontAttributes="Bold"/>
+                                                                                        </Border>
+                                                                                    </Grid>
+
+                                                                                    <!-- Missing LTE -->
+                                                                                    <VerticalStackLayout Spacing="2" IsVisible="{Binding HasMissingLte}">
+                                                                                        <Label Text="Missing LTE bands:" FontSize="10" TextColor="#c62828" FontAttributes="Bold"/>
+                                                                                        <Label Text="{Binding MissingLteBands}" FontSize="10" TextColor="#b71c1c" LineBreakMode="WordWrap"/>
+                                                                                    </VerticalStackLayout>
+
+                                                                                    <!-- Missing 5G -->
+                                                                                    <VerticalStackLayout Spacing="2" IsVisible="{Binding HasMissing5G}">
+                                                                                        <Label Text="Missing 5G NR bands:" FontSize="10" TextColor="#c62828" FontAttributes="Bold"/>
+                                                                                        <Label Text="{Binding Missing5GBands}" FontSize="10" TextColor="#b71c1c" LineBreakMode="WordWrap"/>
+                                                                                    </VerticalStackLayout>
+
+                                                                                    <!-- Missing UMTS -->
+                                                                                    <VerticalStackLayout Spacing="2" IsVisible="{Binding HasMissingUmts}">
+                                                                                        <Label Text="Missing UMTS bands:" FontSize="10" TextColor="#c62828" FontAttributes="Bold"/>
+                                                                                        <Label Text="{Binding MissingUmtsBands}" FontSize="10" TextColor="#b71c1c" LineBreakMode="WordWrap"/>
+                                                                                    </VerticalStackLayout>
+
+                                                                                    <!-- Missing GSM -->
+                                                                                    <VerticalStackLayout Spacing="2" IsVisible="{Binding HasMissingGsm}">
+                                                                                        <Label Text="Missing GSM bands:" FontSize="10" TextColor="#c62828" FontAttributes="Bold"/>
+                                                                                        <Label Text="{Binding MissingGsmBands}" FontSize="10" TextColor="#b71c1c" LineBreakMode="WordWrap"/>
+                                                                                    </VerticalStackLayout>
+                                                                                </VerticalStackLayout>
+                                                                            </Border>
+                                                                        </DataTemplate>
+                                                                    </BindableLayout.ItemTemplate>
+                                                                </VerticalStackLayout>
+                                                            </VerticalStackLayout>
+                                                        </Border>
+
+                                                        <!-- Fully Covered Countries -->
+                                                        <Border BackgroundColor="#e8f5e9" StrokeShape="RoundRectangle 8" Padding="12" Stroke="#c8e6c9"
+                                                                IsVisible="{Binding CoveredCountries.Count, Converter={StaticResource IsGreaterThanZeroConverter}}">
+                                                            <VerticalStackLayout Spacing="6">
+                                                                <HorizontalStackLayout Spacing="8">
+                                                                    <Ellipse WidthRequest="10" HeightRequest="10" Fill="#4caf50"/>
+                                                                    <Label Text="Fully Compatible Countries (100% match)" FontAttributes="Bold" FontSize="12" TextColor="#2e7d32"/>
+                                                                </HorizontalStackLayout>
+                                                                <Label Text="{Binding CoveredCountries, Converter={StaticResource ListToStringConverter}}"
+                                                                       FontSize="11" TextColor="#1b5e20" LineBreakMode="WordWrap"/>
+                                                            </VerticalStackLayout>
+                                                        </Border>
+                                                    </VerticalStackLayout>
+                                                </Border>
+                                            </VerticalStackLayout>
+                                        </Border>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </VerticalStackLayout>
+
+                        <!-- Empty state -->
+                        <Border BackgroundColor="#f5f7fa"
+                                StrokeShape="RoundRectangle 12" Padding="32"
+                                HorizontalOptions="Center" Margin="0,20"
+                                IsVisible="{Binding Recommendations.Count, Converter={StaticResource IsZeroConverter}}">
+                            <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                                <Label Text="No recommendations yet" FontSize="16" FontAttributes="Bold"
+                                       HorizontalOptions="Center" TextColor="#5a6270"/>
+                                <Label Text="Select countries and click Analyze to see recommendations."
+                                       TextColor="#5a6270" FontSize="13" HorizontalOptions="Center"/>
+                            </VerticalStackLayout>
+                        </Border>
+                    </VerticalStackLayout>
+                </ScrollView>
+            </Border>
+        </Grid>
+
+        <!-- Status bar -->
+        <Border Grid.Row="2" Padding="20,12"
+                BackgroundColor="#f0f4f8"
+                Stroke="#e0e6ed">
+            <Grid ColumnDefinitions="*,Auto">
+                <Label Text="{Binding StatusMessage}" VerticalOptions="Center" FontSize="13"
+                       TextColor="#1a1a2e"/>
+                <ActivityIndicator Grid.Column="1" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}"
+                                   WidthRequest="20" HeightRequest="20" Color="#1976d2"/>
+            </Grid>
+        </Border>
+    </Grid>
+</ContentView>

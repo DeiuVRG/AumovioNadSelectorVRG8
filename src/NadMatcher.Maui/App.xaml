@@ -1,0 +1,29 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NadMatcher.Maui"
+             xmlns:converters="clr-namespace:NadMatcher.Maui.Converters"
+             x:Class="NadMatcher.Maui.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Global Converters -->
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter"/>
+            <converters:IsNotNullConverter x:Key="IsNotNullConverter"/>
+            <converters:IsNotNullOrEmptyConverter x:Key="IsNotNullOrEmptyConverter"/>
+            <converters:IsZeroConverter x:Key="IsZeroConverter"/>
+            <converters:PercentageToColorConverter x:Key="PercentageToColorConverter"/>
+            <converters:PercentageToBackgroundConverter x:Key="PercentageToBackgroundConverter"/>
+            <converters:BoolToBackgroundConverter x:Key="BoolToBackgroundConverter"/>
+            <converters:PerfectMatchBackgroundConverter x:Key="PerfectMatchBackgroundConverter"/>
+            <converters:IsGreaterThanZeroConverter x:Key="IsGreaterThanZeroConverter"/>
+            <converters:BoolToExpandConverter x:Key="BoolToExpandConverter"/>
+            <converters:BoolToThemeIconConverter x:Key="BoolToThemeIconConverter"/>
+            <converters:BoolToThemeTextConverter x:Key="BoolToThemeTextConverter"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

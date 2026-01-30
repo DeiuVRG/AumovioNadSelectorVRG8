@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:NadMatcher.Maui.ViewModels"
+             xmlns:views="clr-namespace:NadMatcher.Maui.Views"
+             xmlns:converters="clr-namespace:NadMatcher.Maui.Converters"
+             x:Class="NadMatcher.Maui.MainPage"
+             x:DataType="vm:MainWindowViewModel"
+             Title="AumovioNadSelectorVRG8">
+
+    <Grid RowDefinitions="Auto,*">
+        <!-- Header -->
+        <Border Grid.Row="0" Padding="20,16" BackgroundColor="#1565c0">
+            <Grid ColumnDefinitions="*,Auto">
+                <VerticalStackLayout VerticalOptions="Center">
+                    <HorizontalStackLayout Spacing="12">
+                        <Label Text="AumovioNadSelectorVRG8" FontSize="24" FontAttributes="Bold" TextColor="White"/>
+                        <Border BackgroundColor="#ffffff30" Padding="8,4" StrokeShape="RoundRectangle 4">
+                            <Label Text="{Binding CurrentVersion, StringFormat='v{0}'}" FontSize="11" TextColor="White" FontAttributes="Bold"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                    <Label Text="Find compatible NAD modules for your target countries"
+                           TextColor="#b3d4fc" FontSize="13" Margin="0,4,0,0"/>
+                </VerticalStackLayout>
+
+                <!-- Update Button -->
+                <Button Grid.Column="1" Command="{Binding InstallUpdateCommand}"
+                        Text="{Binding UpdateVersion, StringFormat='Update v{0}'}"
+                        IsVisible="{Binding UpdateAvailable}"
+                        VerticalOptions="Center"
+                        BackgroundColor="#4caf50" TextColor="White"
+                        CornerRadius="8" Padding="14,8"
+                        IsEnabled="{Binding IsUpdating, Converter={StaticResource InverseBoolConverter}}"/>
+            </Grid>
+        </Border>
+
+        <!-- Tab Content -->
+        <Grid Grid.Row="1" RowDefinitions="Auto,*" BackgroundColor="#f5f7fa">
+            <!-- Tab Headers -->
+            <HorizontalStackLayout Grid.Row="0" Padding="20,10" Spacing="10"
+                                   BackgroundColor="#ffffff">
+                <Button Text="NAD -> Countries"
+                        Clicked="OnNadTabClicked"
+                        x:Name="NadTabButton"
+                        BackgroundColor="#1976d2" TextColor="White"
+                        CornerRadius="8" Padding="20,12"/>
+                <Button Text="Countries -> NAD"
+                        Clicked="OnCountryTabClicked"
+                        x:Name="CountryTabButton"
+                        BackgroundColor="#e0e0e0" TextColor="#333333"
+                        CornerRadius="8" Padding="20,12"/>
+            </HorizontalStackLayout>
+
+            <!-- Tab Content Frame -->
+            <ContentView Grid.Row="1" x:Name="TabContentView"/>
+        </Grid>
+    </Grid>
+</ContentPage>

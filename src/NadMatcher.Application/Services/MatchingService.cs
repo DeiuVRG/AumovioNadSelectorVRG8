@@ -10,9 +10,35 @@ public class MatchingService : IMatchingService
 {
     private readonly ICountryRepository _countryRepository;
 
+    // GSM band mapping: NAD format (B2, B3, B5, B8) -> Country format (GSM-850, GSM-900, etc.)
+    // NAD modules use LTE-style band numbers for GSM, while countries use standard GSM naming
+    private static readonly Dictionary<string, string> GsmBandMapping = new(StringComparer.OrdinalIgnoreCase)
+    {
+        { "B2", "GSM-1900" },   // PCS 1900 MHz
+        { "B3", "GSM-1800" },   // DCS 1800 MHz
+        { "B5", "GSM-850" },    // 850 MHz
+        { "B8", "GSM-900" }     // 900 MHz (E-GSM)
+    };
+
     public MatchingService(ICountryRepository countryRepository)
     {
         _countryRepository = countryRepository;
+    }
+
+    /// <summary>
+    /// Normalizes GSM band name from NAD format (B2, B3, B5, B8) to Country format (GSM-1900, GSM-1800, etc.).
+    /// </summary>
+    private static string NormalizeGsmBand(string band)
+    {
+        return GsmBandMapping.TryGetValue(band, out var normalized) ? normalized : band;
+    }
+
+    /// <summary>
+    /// Normalizes a set of GSM bands from NAD format to Country format.
+    /// </summary>
+    private static HashSet<string> NormalizeGsmBands(IEnumerable<string> bands)
+    {
+        return bands.Select(NormalizeGsmBand).ToHashSet(StringComparer.OrdinalIgnoreCase);
     }
 
     public MatchResult MatchNadToCountry(NadModule nad, Country country)
@@ -22,9 +48,10 @@ public class MatchingService : IMatchingService
 
     public MatchResult MatchNadToCountry(NadModule nad, Country country, TechnologyFilter filter)
     {
+        // For GSM, normalize NAD bands (B2, B3, B5, B8) to country format (GSM-1900, GSM-1800, GSM-850, GSM-900)
         var gsmMatch = filter.IncludeGsm
             ? CalculateTechnologyMatch(
-                nad.Bands.Gsm.ToHashSet(StringComparer.OrdinalIgnoreCase),
+                NormalizeGsmBands(nad.Bands.Gsm),
                 country.GetGsmBands())
             : TechnologyMatch.Empty;
 
